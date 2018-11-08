@@ -78,7 +78,7 @@ class ContactForm extends Component {
                             </Field>
                         </div>
                         <div className="form-group col-md-3">
-                            <Field name="numberOfFloors" component="select" className="custom-select">
+                            <Field name="sitePhasing" component="select" className="custom-select">
                                 <option value="" >Site-Building Phasing...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -87,7 +87,7 @@ class ContactForm extends Component {
                             </Field>
                         </div>
                         <div className="form-group col-md-3">
-                            <Field name="numberOfFloors" component="select" className="custom-select">
+                            <Field name="numberOfIdfs" component="select" className="custom-select">
                                 <option value="" >Number of IDF's...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
