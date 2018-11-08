@@ -20,8 +20,8 @@ class Header extends Component {
                     {/* <Link className="nav-link js-scroll-trigger" to="/" >Home</Link> */}
                   </li>
                   <li className="nav-item">
-                  <Link className="nav-link js-scroll-trigger" to="/contact/new" >Contact Us</Link>
-                </li> 
+                    <Link className="nav-link js-scroll-trigger" to="/contact/new" >Contact Us</Link>
+                  </li>
                   <li className="nav-item">
                     <Link className="nav-link js-scroll-trigger" to="" >Phone:  817 909 2138</Link>
                   </li>
@@ -109,10 +109,10 @@ class Header extends Component {
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
                         Windsor City Line
-                  </div>
+                      </div>
                       <div className="project-name">
                         Project Duration: 2 Years
-                  </div>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -139,25 +139,25 @@ class Header extends Component {
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
                         Category
-                  </div>
+                      </div>
                       <div className="project-name">
                         Project Name
-                  </div>
+                      </div>
                     </div>
                   </div>
                 </Link>
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/004" >
-                  <img className="img-fluid" src={require("../../Assets/img/alexan_katy_trail.jpg")} alt="" />
+                  <img className="img-fluid" src={require('../../Assets/img/alexan_katy_trail.jpg')} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
                         Category
-                  </div>
+                      </div>
                       <div className="project-name">
                         Project Name
-                  </div>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -169,10 +169,10 @@ class Header extends Component {
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
                         Category
-                  </div>
+                      </div>
                       <div className="project-name">
                         Project Name
-                  </div>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -223,8 +223,8 @@ class Header extends Component {
         </div>
 
       </div>
-    );
-  }
+    )
+  };
 }
 
 export default Header;

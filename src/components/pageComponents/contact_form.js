@@ -27,10 +27,13 @@ class ContactForm extends Component {
 
     render() {
         const { handleSubmit } = this.props;
-
+        
         return (
             <form name="contact" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <div className="container mt-5">
+                    <div className="form-row">
+                        {this.props.email.msg}
+                    </div>
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <Field name="firstName" component="input" type="text" placeholder="First Name" className="form-control" />
@@ -138,21 +141,26 @@ class ContactForm extends Component {
                     </div>
                     <div className="form-row">
                         <div className="form-group col-md-12">
-                            <Field name="tarea" id="tarea" component="textarea" type="text" placeholder="Other" className="form-control" />
+                            <Field name="description" id="description" component="textarea" type="text" placeholder="Other" className="form-control" />
                         </div>
                     </div>
 
                     <button type="submit" className="btn btn-primary btn-sm btn-block">Submit</button>
                     <Link className="btn btn-primary btn-sm btn-block" to="/" >Cancel</Link>
+                    
                 </div>
             </form>
         );
     }
 }
 
+function mapStateToProps(state) {
+    return { email: state.email };
+}
+
 
 export default reduxForm({
     form: 'NewContactForm'
 })(
-    connect(null, { sendEmail })(ContactForm)
+    connect(mapStateToProps, { sendEmail })(ContactForm)
 );
