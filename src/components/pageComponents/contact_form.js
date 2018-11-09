@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
 
+import "react-datepicker/dist/react-datepicker.css";
 import { sendEmail } from '../../actions';
+
 
 
 const renderField = ({ input, label }) => (
@@ -16,6 +20,19 @@ const renderField = ({ input, label }) => (
 
 
 class ContactForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            startDate: moment()
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(date) {
+        this.setState({
+            startDate: date
+        });
+    }
 
     renderCheckboxField(field) {
         return (
@@ -32,7 +49,6 @@ class ContactForm extends Component {
 
     render() {
         const { handleSubmit } = this.props;
-
         return (
             <form name="contact" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <div className="container mt-5">
@@ -56,8 +72,11 @@ class ContactForm extends Component {
                             <Field name="phone" component="input" type="text" placeholder="Phone" className="form-control" />
                         </div>
                     </div>
-                    <h5>Property Details</h5>
+                    <h5 className="mt-2">Start Date and Development Details</h5>
                     <div className="form-row">
+                        <div className="form-group col-md-3">
+                            <DatePicker className="custom-select" selected={this.state.startDate} onChange={this.handleChange} />
+                        </div>
                         <div className="form-group col-md-3">
                             <Field name="buildingTypes" component="select" className="custom-select">
                                 <option value="">Building Type...</option>
@@ -101,7 +120,7 @@ class ContactForm extends Component {
                             </Field>
                         </div>
                     </div>
-                    <div className="form-row">
+                    <div className="form-row mt-2">
                         <div className="form-group col-md-4">
                             <h5>Low Voltage Cabling</h5>
                             <Field name="c0" id="c0" htmlFor="c0" label="CAT5/6... cable" component={this.renderCheckboxField} />
