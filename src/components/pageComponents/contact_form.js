@@ -7,27 +7,32 @@ import { connect } from 'react-redux';
 import { sendEmail } from '../../actions';
 
 
-class ContactForm extends Component {
+const renderField = ({ input, label }) => (
+    <div className="custom-control custom-checkbox">
+        <input type="checkbox" className="custom-control-input" {...input} />
+        <label className="custom-control-label">{label}</label>
+    </div>
+);
 
+
+class ContactForm extends Component {
 
     renderCheckboxField(field) {
         return (
             <div className="custom-control custom-checkbox">
-                <input name={field.name} type="checkbox" className="custom-control-input" {...field.input} />
-                <label htmlFor={field.name} className="custom-control-label">{field.label}</label>
+                <input name={field.name} id={field.id} type="checkbox" className="custom-control-input" {...field.input} />
+                <label htmlFor={field.htmlFor} className="custom-control-label" >{field.label}</label>
             </div>
         );
     }
-
 
     onSubmit(values) {
         this.props.sendEmail(values);
     }
 
-
     render() {
         const { handleSubmit } = this.props;
-        
+
         return (
             <form name="contact" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <div className="container mt-5">
@@ -46,11 +51,12 @@ class ContactForm extends Component {
                         <div className="form-group col-md-6">
                             <Field name="email" component="input" type="text" placeholder="Email" className="form-control" />
                         </div>
-                    
+
                         <div className="form-group col-md-6">
                             <Field name="phone" component="input" type="text" placeholder="Phone" className="form-control" />
                         </div>
                     </div>
+                    <h5>Property Details</h5>
                     <div className="form-row">
                         <div className="form-group col-md-3">
                             <Field name="buildingTypes" component="select" className="custom-select">
@@ -60,7 +66,6 @@ class ContactForm extends Component {
                                 <option value="Commercial">Commercial</option>
                             </Field>
                         </div>
-
                         <div className="form-group col-md-3">
                             <Field name="numberOfUnits" component="select" className="custom-select">
                                 <option value="" >Number of Units...</option>
@@ -96,105 +101,50 @@ class ContactForm extends Component {
                             </Field>
                         </div>
                     </div>
-
                     <div className="form-row">
                         <div className="form-group col-md-4">
-                        {/* <Field name="service1" label="service" component={this.renderCheckboxField} />
-                            <Field name="service2" label="service" component={this.renderCheckboxField} />
-                            <Field name="service3" label="service" component={this.renderCheckboxField} />
-                            <Field name="service4" label="service" component={this.renderCheckboxField} /> */}
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c1" id="c1" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c1" className="custom-control-label">CAT5 Cable</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c2" id="c2" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c2" className="custom-control-label">CAT6 Cable</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c3" id="c3" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c3" className="custom-control-label">RG-11 homeruns</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c4" id="c4" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c4" className="custom-control-label">3" sleeves</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c5" id="c5" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c5" className="custom-control-label">1.25" smoothwall innerduct</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c6" id="c6" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c6" className="custom-control-label">PVC 4" pipes</label>
-                            </div>
+                            <h5>Low Voltage Cabling</h5>
+                            <Field name="c0" id="c0" htmlFor="c0" label="CAT5/6... cable" component={this.renderCheckboxField} />
+                            <Field name="c1" id="c1" htmlFor="c1" label="RG-11 homeruns" component={this.renderCheckboxField} />
+                            <Field name="c2" id="c2" htmlFor="c2" label="voice lines" component={this.renderCheckboxField} />
+                            <Field name="c3" id="c3" htmlFor="c3" label="3 sleeves" component={this.renderCheckboxField} />
+                            <Field name="c4" id="c4" htmlFor="c4" label="1.25 smoothwall innerduct" component={this.renderCheckboxField} />
+                            <Field name="c5" id="c5" htmlFor="c5" label="PVC 4 pipes" component={this.renderCheckboxField} />
+                            <h5>Trimmings</h5>
+                            <Field name="c6" id="c6" htmlFor="c6" label="phone outlets" component={this.renderCheckboxField} />
+                            <Field name="c7" id="c7" htmlFor="c7" label="comms enclosure" component={this.renderCheckboxField} />
                         </div>
                         <div className="form-group col-md-4">
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c7" id="c7" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c7" className="custom-control-label">phone outlets</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c8" id="c8" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c8" className="custom-control-label">comms enclosure</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c9" id="c9" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c9" className="custom-control-label">Magnetic locks</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c10" id="c10" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c10" className="custom-control-label">Electric Strikes</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c11" id="c11" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c11" className="custom-control-label">Request to Exit</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c12" id="c12" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c12" className="custom-control-label">Proximity readers</label>
-                            </div>
+                            <h5>Access Control</h5>
+                            <Field name="c8" id="c8" htmlFor="c8" label="Magnetic locks" component={this.renderCheckboxField} />
+                            <Field name="c9" id="c9" htmlFor="c9" label="Electric Strikes" component={this.renderCheckboxField} />
+                            <Field name="c10" id="c10" htmlFor="c10" label="Request to Exit" component={this.renderCheckboxField} />
+                            <Field name="c11" id="c11" htmlFor="c11" label="Proximity readers" component={this.renderCheckboxField} />
+                            <Field name="c12" id="c12" htmlFor="c12" label="panic bars" component={this.renderCheckboxField} />
                         </div>
                         <div className="form-group col-md-4">
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c13" id="c13" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c13" className="custom-control-label">indoor Dome Cameras</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c14" id="c14" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c14" className="custom-control-label">Outdoor Dome Cameras</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c15" id="c15" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c15" className="custom-control-label">License Plate Cameras</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c16" id="c16" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c16" className="custom-control-label">Elevator Cameras</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c17" id="c17" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c17" className="custom-control-label">Conduit</label>
-                            </div>
-                            <div className="custom-control custom-checkbox">
-                                <Field name="c18" id="c18" component="input" type="checkbox" className="custom-control-input" />
-                                <label htmlFor="c18" className="custom-control-label">Garage panic box</label>
-                            </div>
+                            <h5>CCTV</h5>
+                            <Field name="c13" id="c13" htmlFor="c13" label="indoor Dome Cameras" component={this.renderCheckboxField} />
+                            <Field name="c14" id="c14" htmlFor="c14" label="Outdoor Dome Cameras" component={this.renderCheckboxField} />
+                            <Field name="c15" id="c15" htmlFor="c15" label="License Plate Cameras" component={this.renderCheckboxField} />
+                            <Field name="c16" id="c16" htmlFor="c16" label="Elevator Cameras" component={this.renderCheckboxField} />
+                            <Field name="c17" id="c17" htmlFor="c17" label="Garage panic box" component={this.renderCheckboxField} />
+                            <Field name="c18" id="c18" htmlFor="c18" label="Conduit" component={this.renderCheckboxField} />
                         </div>
                     </div>
                     <div className="form-row">
                         <div className="form-group col-md-12">
-                            <Field name="description" id="description" component="textarea" type="text" placeholder="Other" className="form-control" />
+                            <Field name="description" id="description" component="textarea" type="text" placeholder="Additional Description" className="form-control" />
                         </div>
                     </div>
-
                     <button type="submit" className="btn btn-primary btn-sm btn-block">Submit</button>
                     <Link className="btn btn-primary btn-sm btn-block" to="/" >Cancel</Link>
-                    
                 </div>
             </form>
         );
     }
 }
+
 
 function mapStateToProps(state) {
     return { email: state.email };
