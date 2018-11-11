@@ -1,36 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// import Navigation from '../headerfooterComponents/navigation_bar';
 
 class Header extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-          <div className="container">
-            <div className="navbar-brand js-scroll-trigger">
-              INPUTSTREAM
-            </div>
-            <div className="navbar-header">
-              <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    {/* <Link className="nav-link js-scroll-trigger" to="/" >Home</Link> */}
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link js-scroll-trigger" to="/contact/new" >Contact Us</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link js-scroll-trigger" to="" >Phone:  817 909 2138</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-
         <header className="masthead text-center text-white d-flex">
           <div className="container my-auto bg-dark-transparent">
             <div className="row">
@@ -208,8 +183,7 @@ class Header extends Component {
               </div>
               <div className="container">
                 <div className="col-lg-12 mx-auto text-center">
-                  {/* <a className="btn btn-light btn-xl js-scroll-trigger mb-5" href="#services">Contact Us</a> */}
-                  <Link className="btn btn-light btn-xl js-scroll-trigger mb-5" to="/contact/new" >Contact Us</Link>
+                  <Link className="btn btn-light btn-lg  mb-5" to="/contact/new" >Contact Us</Link>
                   <p className="mb-5 text-faded">Or Call Us at:  817-909-2138</p>
                 </div>
               </div>
