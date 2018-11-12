@@ -11,7 +11,7 @@ class Header extends Component {
             <div className="row">
               <div className="col-lg-10 mx-auto">
                 <h1 className="text-uppercase">
-                  <strong>Streamline Wiring Services</strong>
+                  <strong>Streamline Wiring Installations</strong>
                 </h1>
                 <hr></hr>
               </div>
