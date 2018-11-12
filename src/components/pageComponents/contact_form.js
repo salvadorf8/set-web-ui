@@ -64,7 +64,7 @@ class ContactForm extends Component {
                             <Field name="phone" component="input" type="text" placeholder="Phone" className="form-control bg-dark" />
                         </div>
                     </div>
-                    <h5 className="section-heading text-white mt-4 text-center">Start Date and Development Details</h5>
+                    <h5 className="section-heading text-white mt-4 text-center">Projected Start Date and Property Details</h5>
                     <hr className="mt-1" />
                     <div className="form-row">
                         <div className="form-group col-md-3">
@@ -123,7 +123,7 @@ class ContactForm extends Component {
                             <Field name="c3" id="c3" htmlFor="c3" label="3 sleeves" component={this.renderCheckboxField} />
                             <Field name="c4" id="c4" htmlFor="c4" label="1.25 smoothwall innerduct" component={this.renderCheckboxField} />
                             <Field name="c5" id="c5" htmlFor="c5" label="PVC 4 pipes" component={this.renderCheckboxField} />
-                            <h5 className="section-heading text-white mt-4 text-center">Trimming</h5>
+                            <h5 className="section-heading text-white mt-4 text-center">Trim Out</h5>
                             <hr className="mt-1" />
                             <Field name="c6" id="c6" htmlFor="c6" label="phone outlets" component={this.renderCheckboxField} />
                             <Field name="c7" id="c7" htmlFor="c7" label="comms enclosure" component={this.renderCheckboxField} />
