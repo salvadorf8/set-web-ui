@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Navigation from '../headerfooterComponents/navigation_bar';
 
 class Header extends Component {
   render() {
@@ -183,7 +182,7 @@ class Header extends Component {
               </div>
               <div className="container">
                 <div className="col-lg-12 mx-auto text-center">
-                  <Link className="btn btn-light btn-lg  mb-5" to="/contact/new" >Contact Us</Link>
+                  <Link className="btn btn-primary btn-lg  mb-5" to="/contact/new" >Contact Us</Link>
                   <p className="mb-5 text-faded">Or Call Us at:  817-909-2138</p>
                 </div>
               </div>

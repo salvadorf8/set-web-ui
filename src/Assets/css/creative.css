@@ -2,6 +2,7 @@ body,
 html {
   width: 100%;
   height: 100%;
+  background-color: #212529
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: yellow;
+  border-color: #f05f40;
 }
 
 hr.light {
@@ -102,7 +103,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: yellow;
+  color: #F05F40;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -384,4 +385,9 @@ header.masthead p {
 
 .fa-co-yellow{
   color: yellow;
+}
+
+
+.react-datepicker__input-container {
+  background-color: #212529 !important;
 }
