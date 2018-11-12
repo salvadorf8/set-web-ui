@@ -7,7 +7,6 @@ import promise from 'redux-promise';
 
 
 import './Assets/css/creative.css';
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import reducers from './reducers';
 import HomeIndex from './components/pageComponents/home_index';
 import ContactNew from './components/pageComponents/contact_form';
