@@ -6,7 +6,7 @@ const NavigationBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
           <div className="container">
-              <span className="navbar-brand">INPUTSTREAM</span>
+              <span className="navbar-brand">STREAMLINE WIRING</span>
               <div className="navbar-header">
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
