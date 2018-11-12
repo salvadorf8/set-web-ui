@@ -16,7 +16,7 @@ class Header extends Component {
                 <hr></hr>
               </div>
               <div className="col-lg-8 mx-auto">
-                <p className="mb-5">Cable Running - Trimming - Security and Authorization integration for MultiFamily Development Projects</p>
+                <p className="mb-5">Wiring and Cabling Installations - Trimming - Security and Authorization integration for MultiFamily Development Projects</p>
                 {/* <a className="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> */}
               </div>
             </div>
