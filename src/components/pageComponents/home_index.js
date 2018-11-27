@@ -176,9 +176,9 @@ class Header extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto text-center">
-                <h2 className="section-heading text-white">Let's Get In Touch!</h2>
+                <h2 className="section-heading text-white mt-4">Let's Get In Touch!</h2>
                 <hr className="my-4" />
-                <p className="mb-5 text-white">Ready to start your next project with us? Were Ready and we will be there.</p>
+                <p className="mb-5 text-faded">Ready to start your next project with us? We are Ready - We will be there.</p>
               </div>
               <div className="container">
                 <div className="col-lg-12 mx-auto text-center">
@@ -186,15 +186,10 @@ class Header extends Component {
                   <p className="mb-5 text-faded">Or Call Us at:  817-909-2138</p>
                 </div>
               </div>
-              <div className="container">
-                <div className="text-right">
-                  <p className="text-faded">&copy; 2018 INPUTSTREAM All Rights Reserved</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-
+        
       </div>
     )
   };

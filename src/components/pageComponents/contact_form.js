@@ -68,11 +68,11 @@ class ContactForm extends Component {
                         <hr className="mt-1" />
                         <div className="form-row">
                             <div className="form-group col-md-3">
-                                <label className="text-faded">Estimated Start Date</label>
+                                <label className="text-secondary">Estimated Start Date</label>
                                 <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleChange} />
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-faded">Building Type...</label>
+                                <label className="text-secondary">Building Type...</label>
                                 <Field name="buildingTypes" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Building Type...</option> */}
                                     <option value="MultiFamily">MultiFamily</option>
@@ -81,7 +81,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-faded">Number of Units...</label>
+                                <label className="text-secondary">Number of Units...</label>
                                 <Field name="numberOfUnits" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Number of Units...</option> */}
                                     <option value="1-100">1 - 99</option>
@@ -90,7 +90,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-faded">Number of Floors...</label>
+                                <label className="text-secondary">Number of Floors...</label>
                                 <Field name="numberOfFloors" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Number of Floors...</option> */}
                                     <option value="1">1</option>
@@ -99,7 +99,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-faded">Site-Building Phasing...</label>
+                                <label className="text-secondary">Site-Building Phasing...</label>
                                 <Field name="sitePhasing" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Site-Building Phasing...</option> */}
                                     <option value="1">1</option>
@@ -109,7 +109,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-faded">Number of IDF's...</label>
+                                <label className="text-secondary">Number of IDF's...</label>
                                 <Field name="numberOfIdfs" component="select" className="custom-select bg-dark" >
                                     {/* <option value="" disabled selected>Number of IDF's...</option> */}
                                     <option value="1">1</option>
