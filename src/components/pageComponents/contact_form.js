@@ -68,54 +68,60 @@ class ContactForm extends Component {
                         <hr className="mt-1" />
                         <div className="form-row">
                             <div className="form-group col-md-3">
-                                <DatePicker className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleChange} />
+                                <label className="text-faded">Estimated Start Date</label>
+                                <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleChange} />
                             </div>
                             <div className="form-group col-md-3">
+                                <label className="text-faded">Building Type...</label>
                                 <Field name="buildingTypes" component="select" className="custom-select bg-dark">
-                                    <option value="">Building Type...</option>
+                                    {/* <option value="" disabled selected>Building Type...</option> */}
                                     <option value="MultiFamily">MultiFamily</option>
                                     <option value="SingleHome">SingleHome</option>
                                     <option value="Commercial">Commercial</option>
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
+                                <label className="text-faded">Number of Units...</label>
                                 <Field name="numberOfUnits" component="select" className="custom-select bg-dark">
-                                    <option value="" >Number of Units...</option>
-                                    <option value="1">1 - 100</option>
-                                    <option value="2">101 - 200</option>
-                                    <option value="3">201 or More...</option>
+                                    {/* <option value="" disabled selected>Number of Units...</option> */}
+                                    <option value="1-100">1 - 99</option>
+                                    <option value="101-200">100 - 199</option>
+                                    <option value="200orMore">200 or More...</option>
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
+                                <label className="text-faded">Number of Floors...</label>
                                 <Field name="numberOfFloors" component="select" className="custom-select bg-dark">
-                                    <option value="" >Number of Floors...</option>
+                                    {/* <option value="" disabled selected>Number of Floors...</option> */}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3 or More...</option>
+                                    <option value="3orMore">3 or More...</option>
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
+                                <label className="text-faded">Site-Building Phasing...</label>
                                 <Field name="sitePhasing" component="select" className="custom-select bg-dark">
-                                    <option value="" >Site-Building Phasing...</option>
+                                    {/* <option value="" disabled selected>Site-Building Phasing...</option> */}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
-                                    <option value="3">4 or More...</option>
+                                    <option value="4orMore">4 or More...</option>
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <Field name="numberOfIdfs" component="select" className="custom-select bg-dark">
-                                    <option value="" >Number of IDF's...</option>
+                                <label className="text-faded">Number of IDF's...</label>
+                                <Field name="numberOfIdfs" component="select" className="custom-select bg-dark" >
+                                    {/* <option value="" disabled selected>Number of IDF's...</option> */}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
-                                    <option value="3">4 or More...</option>
+                                    <option value="4orMore">4 or More...</option>
                                 </Field>
                             </div>
                         </div>
                         <div className="form-row mt-2">
                             <div className="form-group col-md-3">
-                                <h5 className="section-heading text-white mt-3 text-center">Low Voltage Cabling</h5>
+                                <h5 className="section-heading text-white mt-3 text-center">Structured Cable</h5>
                                 <hr className="mt-1" />
                                 <Field name="c0" id="c0" htmlFor="c0" label="CAT5/6... cable" component={this.renderCheckboxField} />
                                 <Field name="c1" id="c1" htmlFor="c1" label="RG-11 homeruns" component={this.renderCheckboxField} />
@@ -152,7 +158,7 @@ class ContactForm extends Component {
                         </div>
                         <div className="form-row mt-2">
                             <div className="form-group col-md-12">
-                                <Field name="description" id="description" component="textarea" type="text" placeholder="Additional Description" className="form-control bg-dark" />
+                                <Field name="description" id="description" component="textarea" type="text" placeholder="Additional Description" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <button type="submit" className="btn btn-primary btn-sm btn-block">Submit</button>
