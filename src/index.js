@@ -12,7 +12,6 @@ import reducers from './reducers';
 import HomeIndex from './components/pageComponents/home_index';
 import ContactNew from './components/pageComponents/contact_form';
 import ProjectShow from './components/pageComponents/project_show';
-import Navigation from './components/headerfooterComponents/navigation_bar';
 import Navigation2 from './components/headerfooterComponents/navigation_bar2';
 
 import registerServiceWorker from './registerServiceWorker';
