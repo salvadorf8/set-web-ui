@@ -22,7 +22,7 @@ class ContactForm extends Component {
     }
 
     onSubmit(values) {
-        this.props.sendEmail(values);
+        this.props.sendEmail(values).then((e) => {this.setState({message: e.payload.data.msg})});
     }
 
     render() {
@@ -31,7 +31,7 @@ class ContactForm extends Component {
             <section className="bg-dark pt-1" id="contactform">
                 <form name="contact" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <div className="container">
-                        <EmailSubmitMessage emailMessage={this.props.email.msg}/>
+                        <EmailSubmitMessage emailMessage={this.state.message}/>
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <Field name="firstName" component="input" type="text" placeholder="First Name" className="form-control bg-dark" />
@@ -147,7 +147,7 @@ class ContactForm extends Component {
                             </div>
                         </div>
                         <button type="submit" className="btn btn-primary btn-sm btn-block">Submit</button>
-                        <Link className="btn btn-primary btn-sm btn-block" to="/" onClick={() => this.setState(this.props.email.msg, null)}>Cancel</Link>
+                        <Link className="btn btn-primary btn-sm btn-block" to="/">Cancel</Link>
                     </div>
                 </form>
             </section>
