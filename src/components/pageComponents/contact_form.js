@@ -3,7 +3,8 @@ import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
-import moment from 'moment';
+import moment, { calendarFormat } from 'moment';
+import EmailSubmitMessage from '../commonComponents/EmailSubmitMessage';
 
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -11,15 +12,9 @@ import { sendEmail } from '../../actions';
 
 
 class ContactForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            startDate: moment()
-        };
-        this.handleChange = this.handleChange.bind(this);
-    }
+    state = { startDate: moment() };
 
-    handleChange(date) {
+    handleDateChange = (date) => {
         this.setState({
             startDate: date
         });
@@ -38,15 +33,17 @@ class ContactForm extends Component {
         this.props.sendEmail(values);
     }
 
+    clearMessage(){
+        this.setState(this.props.email.msg, null);
+    }
+
     render() {
         const { handleSubmit } = this.props;
         return (
             <section className="bg-dark pt-1" id="contactform">
                 <form name="contact" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <div className="container">
-                        <div className="form-row">
-                            {this.props.email.msg}
-                        </div>
+                        <EmailSubmitMessage emailMessage={this.props.email.msg}/>
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <Field name="firstName" component="input" type="text" placeholder="First Name" className="form-control bg-dark" />
@@ -69,7 +66,7 @@ class ContactForm extends Component {
                         <div className="form-row">
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Estimated Start Date</label>
-                                <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleChange} />
+                                <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleDateChange} />
                             </div>
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Building Type...</label>
@@ -162,7 +159,7 @@ class ContactForm extends Component {
                             </div>
                         </div>
                         <button type="submit" className="btn btn-primary btn-sm btn-block">Submit</button>
-                        <Link className="btn btn-primary btn-sm btn-block" to="/" >Cancel</Link>
+                        <Link className="btn btn-primary btn-sm btn-block" to="/" onClick={() => {this.clearMessage()}} >Cancel</Link>
                     </div>
                 </form>
             </section>

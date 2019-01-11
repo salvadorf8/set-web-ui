@@ -6,7 +6,6 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  Footer,
   NavLink
 } from "mdbreact";
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ImageList from '../commonComponents/ImageList';
 import unsplash from '../../api/unsplash';
-import ImageCard from '../commonComponents/ImageCard';
 
 class ServicesPage extends Component {
   //when we expect an object to be an array, you default your object an empty array
