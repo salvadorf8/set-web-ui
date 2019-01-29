@@ -14,7 +14,6 @@ import ContactNew from './components/pageComponents/contact_form';
 import ProjectShow from './components/pageComponents/project_show';
 import Navigation2 from './components/headerfooterComponents/navigation_bar2';
 
-import registerServiceWorker from './registerServiceWorker';
 
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
@@ -26,9 +25,9 @@ ReactDOM.render(
             <div>
                 <Navigation2 />
                 <Switch>
+                    <Route path="/" exact component={HomeIndex} />
                     <Route path="/contact/new" component={ContactNew} />
                     <Route path="/project/:id" component={ProjectShow} />
-                    <Route path="/" component={HomeIndex} />
                 </Switch>
                 <Footer color="indigo">
                     <p className="footer-copyright mb-0 py-3 text-center text-secondary">
@@ -42,4 +41,3 @@ ReactDOM.render(
 
     , document.getElementById('root'));
 
-registerServiceWorker();
