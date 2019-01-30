@@ -3,7 +3,8 @@ import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
-import moment, { calendarFormat } from 'moment';
+import moment from 'moment';
+// import moment, { calendarFormat } from 'moment';
 import "react-datepicker/dist/react-datepicker.css";
 
 import EmailSubmitMessage from './commonComponents/EmailSubmitMessage';
