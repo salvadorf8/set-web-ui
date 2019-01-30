@@ -104,7 +104,7 @@ class App extends React.Component {
                         images={this.state.n001.images}
                     />}
                     />
-                    <Route path="/project/002" render={(props) => <ProjectDetail
+                    <Route path="/project/002" exact render={(props) => <ProjectDetail
                         aptName={this.state.n002.aptName}
                         address={this.state.n002.address}
                         duration={this.state.n002.duration}
@@ -114,7 +114,7 @@ class App extends React.Component {
                         images={this.state.n002.images}
                     />}
                     />
-                    <Route path="/project/003" render={(props) => <ProjectDetail
+                    <Route path="/project/003" exact render={(props) => <ProjectDetail
                         aptName={this.state.n003.aptName}
                         address={this.state.n003.address}
                         duration={this.state.n003.duration}
@@ -124,7 +124,7 @@ class App extends React.Component {
                         images={this.state.n003.images}
                     />}
                     />
-                    <Route path="/project/004" render={(props) => <ProjectDetail
+                    <Route path="/project/004" exact render={(props) => <ProjectDetail
                         aptName={this.state.n004.aptName}
                         address={this.state.n004.address}
                         duration={this.state.n004.duration}
