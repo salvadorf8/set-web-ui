@@ -6,7 +6,7 @@ import promise from 'redux-promise';
 // import thunk from 'redux-thunk';
 
 import App from './components/App';
-import './Assets/css/creative.css';
+import './assets/css/creative.css';
 import reducers from './reducers';
 
 const composeEnhanders = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

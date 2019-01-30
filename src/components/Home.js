@@ -78,7 +78,7 @@ class Header extends Component {
             <div className="row no-gutters popup-gallery">
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/001" >
-                  <img className="img-fluid" src={require('../Assets/img/portfolio/thumbnails/UpTownSquare.png')} alt="" />
+                  <img className="img-fluid" src={require('../assets/img/portfolio/gallery/dallas1/UpTownSquare.JPG')} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
@@ -93,7 +93,7 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/002" >
-                  <img className="img-fluid" src={require("../Assets/img/amesbury_apartments.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/amesbury_apartments.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
@@ -108,7 +108,7 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/003" >
-                  <img className="img-fluid" src={require("../Assets/img/Green_Park2.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/Green_Park2.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
@@ -123,7 +123,7 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/004" >
-                  <img className="img-fluid" src={require('../Assets/img/alexan_katy_trail.jpg')} alt="" />
+                  <img className="img-fluid" src={require('../assets/img/alexan_katy_trail.jpg')} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
@@ -138,7 +138,7 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/005" >
-                  <img className="img-fluid" src={require("../Assets/img/Maple-Ave-2.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/Maple-Ave-2.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
@@ -153,7 +153,7 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/006" >
-                  <img className="img-fluid" src={require("../Assets/img/quadrangle-apartments.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/quadrangle-apartments.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
