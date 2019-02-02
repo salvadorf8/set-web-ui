@@ -93,7 +93,7 @@ class App extends React.Component {
                     <NavBar />
                     <Route path="/" exact component={HomeIndex} />
                     <Route path="/contact/new" component={ContactNew} />
-                    <Route path="/project/001" render={(props) => <ProjectDetail
+                    <Route path="/project/001" exact render={(props) => <ProjectDetail
                         aptName={this.state.n001.aptName}
                         address={this.state.n001.address}
                         duration={this.state.n001.duration}
