@@ -26,7 +26,7 @@ class ProjectDetail extends Component {
         </div>
         <div className="row mb-5">
           <div className="col-lg-4">
-            <img className="img-fluid" src={require(`../assets/img/portfolio/thumbnails/${this.props.mainImage}.JPG`)} alt="" />
+            <img className="img-fluid" src={require(`../assets/img/portfolio/thumbnails/${this.props.mainImage}.jpg`)} alt="" />
           </div>
           <div className="col-lg-8">
             <div>
