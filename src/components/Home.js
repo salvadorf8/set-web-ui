@@ -78,7 +78,7 @@ class Header extends Component {
             <div className="row no-gutters popup-gallery">
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/001" >
-                  <img className="img-fluid" src={require('../assets/img/portfolio/gallery/dallas1/UpTownSquare.JPG')} alt="" />
+                  <img className="img-fluid" src={require('../assets/img/portfolio/thumbnails/dallas1/UpTownSquare.JPG')} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">

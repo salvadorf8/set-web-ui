@@ -75,7 +75,6 @@ class App extends React.Component {
             images: [
                 { id: '1', description: null, urls: { regular: 'dallas4/IMG_1321' } },
                 { id: '2', description: null, urls: { regular: 'dallas4/IMG_1322' } },
-                { id: '3', description: null, urls: { regular: 'dallas4/IMG_1323' } },
                 { id: '4', description: null, urls: { regular: 'dallas4/IMG_1324' } },
                 { id: '5', description: null, urls: { regular: 'dallas4/IMG_1517' } },
                 { id: '7', description: null, urls: { regular: 'dallas4/IMG_1518' } },
