@@ -23,7 +23,7 @@ class ContactForm extends Component {
 
     onSubmit(values) {
         this.props.sendEmail(values).then((e) => {this.setState({message: e.payload.data.msg})});
-        console.log(this.props.email);
+        // console.log(this.props.email);
     }
 
     render() {
@@ -158,7 +158,7 @@ class ContactForm extends Component {
 
 
 function mapStateToProps(state) {
-    console.log(state);
+    // console.log(state);
     return { email: state.email };
 }
 

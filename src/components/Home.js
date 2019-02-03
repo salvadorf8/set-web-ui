@@ -78,7 +78,7 @@ class Header extends Component {
             <div className="row no-gutters popup-gallery">
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/001" >
-                  <img className="img-fluid" src={require('../assets/img/portfolio/thumbnails/dallas1/UpTownSquare.jpg')} alt="" />
+                  <img className="img-fluid" src={require('../assets/img/portfolio/thumbnails/uptown-square/UpTownSquare.jpg')} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
@@ -93,14 +93,14 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/002" >
-                  <img className="img-fluid" src={require("../assets/img/amesbury_apartments.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/portfolio/thumbnails/bnf-flats/BnF-Flats.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
-                        Details coming soon
+                      Click for more info
                       </div>
                       <div className="project-name">
-                        Under construction
+                        B & F Flats Apartments
                       </div>
                     </div>
                   </div>
@@ -108,14 +108,14 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/003" >
-                  <img className="img-fluid" src={require("../assets/img/Green_Park2.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/portfolio/thumbnails/domain-west/DomainWest.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
-                        Details coming soon
+                      Click for more info
                       </div>
                       <div className="project-name">
-                        Under construction
+                        Domain West Apartments
                       </div>
                     </div>
                   </div>
@@ -123,14 +123,14 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/004" >
-                  <img className="img-fluid" src={require('../assets/img/alexan_katy_trail.jpg')} alt="" />
+                  <img className="img-fluid" src={require('../assets/img/portfolio/thumbnails/city-line/CityLine.jpg')} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
-                        Details coming soon
+                      Click for more info
                       </div>
                       <div className="project-name">
-                        Under construction
+                        City Line Apartments
                       </div>
                     </div>
                   </div>

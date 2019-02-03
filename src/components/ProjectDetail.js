@@ -18,7 +18,6 @@ class ProjectDetail extends Component {
   // };
 
   render(props) {
-    console.log(this.props)
     return (
       <div className="container">
         <div>
