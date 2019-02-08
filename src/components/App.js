@@ -79,36 +79,56 @@ class App extends React.Component {
                 { id: '2', description: null, urls: { regular: 'city-line/IMG_1034' } },
                 { id: '3', description: null, urls: { regular: 'city-line/IMG_1035' } },
                 { id: '4', description: null, urls: { regular: 'city-line/IMG_1036' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1124' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_1128' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_1129' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1190' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1192' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_1206' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_1207' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1230' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1231' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_1234' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_1321' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1322' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1323' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_1324' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_1463' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1464' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1465' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_1517' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_1518' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1520' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1521' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_1557' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_1567' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1637' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_1638' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_1639' } },
-                { id: '2', description: null, urls: { regular: 'city-line/IMG_2190' } },
-                { id: '3', description: null, urls: { regular: 'city-line/IMG_2192' } },
-                { id: '4', description: null, urls: { regular: 'city-line/IMG_2263' } },
-                { id: '1', description: null, urls: { regular: 'city-line/IMG_2310' } }
+                { id: '5', description: null, urls: { regular: 'city-line/IMG_1124' } },
+                { id: '6', description: null, urls: { regular: 'city-line/IMG_1128' } },
+                { id: '7', description: null, urls: { regular: 'city-line/IMG_1129' } },
+                { id: '8', description: null, urls: { regular: 'city-line/IMG_1190' } },
+                { id: '9', description: null, urls: { regular: 'city-line/IMG_1192' } },
+                { id: '10', description: null, urls: { regular: 'city-line/IMG_1206' } },
+                { id: '11', description: null, urls: { regular: 'city-line/IMG_1207' } },
+                { id: '12', description: null, urls: { regular: 'city-line/IMG_1230' } },
+                { id: '13', description: null, urls: { regular: 'city-line/IMG_1231' } },
+                { id: '14', description: null, urls: { regular: 'city-line/IMG_1234' } },
+                { id: '15', description: null, urls: { regular: 'city-line/IMG_1321' } },
+                { id: '16', description: null, urls: { regular: 'city-line/IMG_1322' } },
+                { id: '17', description: null, urls: { regular: 'city-line/IMG_1323' } },
+                { id: '18', description: null, urls: { regular: 'city-line/IMG_1324' } },
+                { id: '19', description: null, urls: { regular: 'city-line/IMG_1463' } },
+                { id: '20', description: null, urls: { regular: 'city-line/IMG_1464' } },
+                { id: '21', description: null, urls: { regular: 'city-line/IMG_1465' } },
+                { id: '22', description: null, urls: { regular: 'city-line/IMG_1517' } },
+                { id: '23', description: null, urls: { regular: 'city-line/IMG_1518' } },
+                { id: '24', description: null, urls: { regular: 'city-line/IMG_1520' } },
+                { id: '25', description: null, urls: { regular: 'city-line/IMG_1521' } },
+                { id: '26', description: null, urls: { regular: 'city-line/IMG_1557' } },
+                { id: '27', description: null, urls: { regular: 'city-line/IMG_1567' } },
+                { id: '28', description: null, urls: { regular: 'city-line/IMG_1637' } },
+                { id: '29', description: null, urls: { regular: 'city-line/IMG_1638' } },
+                { id: '30', description: null, urls: { regular: 'city-line/IMG_1639' } },
+                { id: '31', description: null, urls: { regular: 'city-line/IMG_2190' } },
+                { id: '32', description: null, urls: { regular: 'city-line/IMG_2192' } },
+                { id: '33', description: null, urls: { regular: 'city-line/IMG_2263' } },
+                { id: '34', description: null, urls: { regular: 'city-line/IMG_2310' } }
+            ]
+        },
+        n005:
+        {
+            aptName: 'The Branch',
+            address: '4670 Amesbury Dr. Dallas, TX 75206',
+            mainImage: 'the-branch/the-branch',
+            duration: '8 Months',
+            numberOfEmployed: 10,
+            details: 'Information about this job pending',
+            images: [
+                { id: '1', description: null, urls: { regular: 'the-branch/IMG_6391' } },
+                { id: '2', description: null, urls: { regular: 'the-branch/IMG_6392' } },
+                { id: '3', description: null, urls: { regular: 'the-branch/IMG_6393' } },
+                { id: '4', description: null, urls: { regular: 'the-branch/IMG_6398' } },
+                { id: '5', description: null, urls: { regular: 'the-branch/IMG_6399' } },
+                { id: '6', description: null, urls: { regular: 'the-branch/IMG_6400' } },
+                { id: '7', description: null, urls: { regular: 'the-branch/IMG_6592' } },
+                { id: '8', description: null, urls: { regular: 'the-branch/IMG_6594' } },
+                { id: '9', description: null, urls: { regular: 'the-branch/IMG_6596' } }
             ]
         }
     };
@@ -160,7 +180,7 @@ class App extends React.Component {
                         images={this.state.n004.images}
                     />}
                     />
-                    {/* <Route path="/project/005" exact render={(props) => <ProjectDetail
+                    <Route path="/project/005" exact render={(props) => <ProjectDetail
                         aptName={this.state.n005.aptName}
                         address={this.state.n005.address}
                         duration={this.state.n005.duration}
@@ -170,7 +190,7 @@ class App extends React.Component {
                         images={this.state.n005.images}
                     />}
                     />
-                    <Route path="/project/006" exact render={(props) => <ProjectDetail
+                    {/* <Route path="/project/006" exact render={(props) => <ProjectDetail
                         aptName={this.state.n006.aptName}
                         address={this.state.n006.address}
                         duration={this.state.n006.duration}

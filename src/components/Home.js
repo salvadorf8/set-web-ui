@@ -21,7 +21,6 @@ class Header extends Component {
             </div>
           </div>
         </header>
-
         <section className="bg-dark" id="about">
           <div className="container">
             <div className="row">
@@ -64,7 +63,6 @@ class Header extends Component {
             </div>
           </div>
         </section>
-
         <section className="p-0  bg-dark minor-space" id="portfolio">
           <div className="container">
             <div className="row">
@@ -138,14 +136,14 @@ class Header extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <Link className="portfolio-box" to="/project/005" >
-                  <img className="img-fluid" src={require("../assets/img/Maple-Ave-2.jpg")} alt="" />
+                  <img className="img-fluid" src={require("../assets/img/portfolio/thumbnails/the-branch/the-branch.jpg")} alt="" />
                   <div className="portfolio-box-caption">
                     <div className="portfolio-box-caption-content">
                       <div className="project-category text-faded">
-                        Details coming soon
+                        Click for more info
                       </div>
                       <div className="project-name">
-                        Under construction
+                        The Branch
                       </div>
                     </div>
                   </div>
