@@ -27,10 +27,10 @@ class ContactForm extends Component {
     }
 
     render() {
-        const { handleSubmit } = this.props;
+
         return (
             <section className="bg-dark pt-1" id="contactform">
-                <form name="contact" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+                <form name="contact" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                     <div className="container">
                         <EmailSubmitMessage emailMessage={this.state.message}/>
                         <div className="form-row">
@@ -54,7 +54,7 @@ class ContactForm extends Component {
                         <hr className="mt-1" />
                         <div className="form-row">
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Estimated Start Date</label>
+                                <label className="text-secondary">Approximate Start Date</label>
                                 <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleDateChange} />
                             </div>
                             <div className="form-group col-md-3">
@@ -110,25 +110,25 @@ class ContactForm extends Component {
                                 <h5 className="section-heading text-white mt-3 text-center">Structured Cable</h5>
                                 <hr className="mt-1" />
                                 <Field name="c0" id="c0" htmlFor="c0" label="CAT5/6... cable" component={CheckBoxField} />
-                                <Field name="c1" id="c1" htmlFor="c1" label="RG-11 homeruns" component={CheckBoxField} />
-                                <Field name="c2" id="c2" htmlFor="c2" label="voice lines" component={CheckBoxField} />
-                                <Field name="c3" id="c3" htmlFor="c3" label="3 sleeves" component={CheckBoxField} />
-                                <Field name="c4" id="c4" htmlFor="c4" label="1.25 smoothwall innerduct" component={CheckBoxField} />
-                                <Field name="c5" id="c5" htmlFor="c5" label="PVC 4 pipes" component={CheckBoxField} />
+                                <Field name="c1" id="c1" htmlFor="c1" label="RG-11 Homeruns" component={CheckBoxField} />
+                                <Field name="c2" id="c2" htmlFor="c2" label="Voice Lines" component={CheckBoxField} />
+                                <Field name="c3" id="c3" htmlFor="c3" label="3 Sleeves" component={CheckBoxField} />
+                                <Field name="c4" id="c4" htmlFor="c4" label="1.25 Smoothwall Innerduct" component={CheckBoxField} />
+                                <Field name="c5" id="c5" htmlFor="c5" label="PVC 4 Pipes" component={CheckBoxField} />
                             </div>
                             <div className="form-group col-md-3">
                                 <h5 className="section-heading text-white mt-3 text-center">Access Control</h5>
                                 <hr className="mt-1" />
-                                <Field name="c8" id="c8" htmlFor="c8" label="Magnetic locks" component={CheckBoxField} />
+                                <Field name="c8" id="c8" htmlFor="c8" label="Magnetic Locks" component={CheckBoxField} />
                                 <Field name="c9" id="c9" htmlFor="c9" label="Electric Strikes" component={CheckBoxField} />
                                 <Field name="c10" id="c10" htmlFor="c10" label="Request to Exit" component={CheckBoxField} />
-                                <Field name="c11" id="c11" htmlFor="c11" label="Proximity readers" component={CheckBoxField} />
-                                <Field name="c12" id="c12" htmlFor="c12" label="panic bars" component={CheckBoxField} />
+                                <Field name="c11" id="c11" htmlFor="c11" label="Proximity Readers" component={CheckBoxField} />
+                                <Field name="c12" id="c12" htmlFor="c12" label="Panic Bars" component={CheckBoxField} />
                             </div>
                             <div className="form-group col-md-3">
                                 <h5 className="section-heading text-white mt-3 text-center">CCTV</h5>
                                 <hr className="mt-1" />
-                                <Field name="c13" id="c13" htmlFor="c13" label="indoor Dome Cameras" component={CheckBoxField} />
+                                <Field name="c13" id="c13" htmlFor="c13" label="Indoor Dome Cameras" component={CheckBoxField} />
                                 <Field name="c14" id="c14" htmlFor="c14" label="Outdoor Dome Cameras" component={CheckBoxField} />
                                 <Field name="c15" id="c15" htmlFor="c15" label="License Plate Cameras" component={CheckBoxField} />
                                 <Field name="c16" id="c16" htmlFor="c16" label="Elevator Cameras" component={CheckBoxField} />
@@ -138,8 +138,8 @@ class ContactForm extends Component {
                             <div className="form-group col-md-3">
                                 <h5 className="section-heading text-white mt-3 text-center">Trim Out</h5>
                                 <hr className="mt-1" />
-                                <Field name="c6" id="c6" htmlFor="c6" label="phone outlets" component={CheckBoxField} />
-                                <Field name="c7" id="c7" htmlFor="c7" label="comms enclosure" component={CheckBoxField} />
+                                <Field name="c6" id="c6" htmlFor="c6" label="Phone Outlets" component={CheckBoxField} />
+                                <Field name="c7" id="c7" htmlFor="c7" label="Comms Enclosure" component={CheckBoxField} />
                             </div>
                         </div>
                         <div className="form-row mt-2">
