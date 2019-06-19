@@ -8,3 +8,7 @@ export const sendEmail = (values) => {
 
     return{ type: 'SEND_EMAIL', payload: promise };
 }
+
+export const selectProperty = (property) => {
+    return {type: 'PROPERTY_SELECTED', payload: property};
+}

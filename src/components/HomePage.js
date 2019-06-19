@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { selectProperty } from '../actions';
+
 
 class Header extends Component {
+
+  constructImageLinks = () => {
+    return this.props.apartments.map((apartment) => {
+      return (
+        <div className="col-lg-4 col-sm-6" key={apartment.id}>
+          <Link className="portfolio-box" to={`/project/${apartment.id}`}>
+            <img className="img-fluid" src={require(`../assets/img/portfolio/thumbnails/${apartment.mainImage}.jpg`)} alt="" />
+            <div className="portfolio-box-caption">
+              <div className="portfolio-box-caption-content">
+                <div className="project-category text-faded">Click for more info</div>
+                <div className="project-name">{apartment.aptName}</div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      );
+    })
+  }
+
   render() {
     return (
       <div>
@@ -74,96 +96,7 @@ class Header extends Component {
           </div>
           <div className="container-fluid p-0">
             <div className="row no-gutters popup-gallery">
-              <div className="col-lg-4 col-sm-6">
-                <Link className="portfolio-box" to="/project/001" >
-                  <img className="img-fluid" src={require('../assets/img/portfolio/thumbnails/uptown-square/UpTownSquare.jpg')} alt="" />
-                  <div className="portfolio-box-caption">
-                    <div className="portfolio-box-caption-content">
-                      <div className="project-category text-faded">
-                        Click for more info
-                      </div>
-                      <div className="project-name">
-                        UpTown Square Apartments
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <Link className="portfolio-box" to="/project/002" >
-                  <img className="img-fluid" src={require("../assets/img/portfolio/thumbnails/bnf-flats/BnF-Flats.jpg")} alt="" />
-                  <div className="portfolio-box-caption">
-                    <div className="portfolio-box-caption-content">
-                      <div className="project-category text-faded">
-                      Click for more info
-                      </div>
-                      <div className="project-name">
-                        B & F Flats Apartments
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <Link className="portfolio-box" to="/project/003" >
-                  <img className="img-fluid" src={require("../assets/img/portfolio/thumbnails/domain-west/DomainWest.jpg")} alt="" />
-                  <div className="portfolio-box-caption">
-                    <div className="portfolio-box-caption-content">
-                      <div className="project-category text-faded">
-                      Click for more info
-                      </div>
-                      <div className="project-name">
-                        Domain West Apartments
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <Link className="portfolio-box" to="/project/004" >
-                  <img className="img-fluid" src={require('../assets/img/portfolio/thumbnails/city-line/CityLine.jpg')} alt="" />
-                  <div className="portfolio-box-caption">
-                    <div className="portfolio-box-caption-content">
-                      <div className="project-category text-faded">
-                      Click for more info
-                      </div>
-                      <div className="project-name">
-                        City Line Apartments
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <Link className="portfolio-box" to="/project/005" >
-                  <img className="img-fluid" src={require("../assets/img/portfolio/thumbnails/the-branch/the-branch.jpg")} alt="" />
-                  <div className="portfolio-box-caption">
-                    <div className="portfolio-box-caption-content">
-                      <div className="project-category text-faded">
-                        Click for more info
-                      </div>
-                      <div className="project-name">
-                        The Branch
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <Link className="portfolio-box" to="/project/006" >
-                  <img className="img-fluid" src={require("../assets/img/quadrangle-apartments.jpg")} alt="" />
-                  <div className="portfolio-box-caption">
-                    <div className="portfolio-box-caption-content">
-                      <div className="project-category text-faded">
-                        Details coming soon
-                      </div>
-                      <div className="project-name">
-                        Under construction
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
+              {this.constructImageLinks()}
             </div>
           </div>
         </section>
@@ -193,4 +126,8 @@ class Header extends Component {
   };
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+  return { apartments: Object.values(state.streamlineData) };
+}
+
+export default connect(mapStateToProps, { selectProperty })(Header);

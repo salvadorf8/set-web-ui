@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import ImageList from './commonComponents/ImageList';
-// import unsplash from '../api/unsplash';
+
 
 class ProjectDetail extends Component {
-
-  // onSearchSubmit = async (term) => {
-  //   // const response = await unsplash.get('/search/photos', {
-  //     const response = await unsplash.get('/collections/3973797/photos', {
-  //     params: { query: 3973797 }
-  //   });
-  //   // this.setState({ images: response.data });
-  // };
-
-  // componentDidMount() {
-  //   this.onSearchSubmit('construction');
-  // };
 
   render(props) {
     return (

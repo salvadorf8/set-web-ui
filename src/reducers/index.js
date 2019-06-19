@@ -1,9 +1,12 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
-import EmailReducer from './emailReducer';
+import emailReducer from './emailReducer';
+import { streamLineDataReducer, selectedPropertyReducer } from './streamlineDataReducer';
 
 export default combineReducers({
-    email: EmailReducer,
-    form: formReducer
+    email: emailReducer,
+    form: formReducer,
+    streamlineData: streamLineDataReducer,
+    selectedProperty: selectedPropertyReducer
 });
