@@ -13,7 +13,7 @@ import { sendEmail } from '../actions';
 
 
 class ContactForm extends Component {
-    state = { startDate: moment(), message: null };
+    state = { startDate: moment(), message: "" };
 
     handleDateChange = (date) => {
         this.setState({
@@ -21,18 +21,18 @@ class ContactForm extends Component {
         });
     }
 
-    onSubmit(values) {
-        this.props.sendEmail(values).then((e) => {this.setState({message: e.payload.data.msg})});
-        // console.log(this.props.email);
+    onSubmit = (values) => {
+        this.props.sendEmail(values).then(
+            () => this.setState({message: this.props.responseMessage})
+        );
     }
 
     render() {
-
         return (
             <section className="bg-dark pt-1" id="contactform">
                 <form name="contact" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                     <div className="container">
-                        <EmailSubmitMessage emailMessage={this.state.message}/>
+                        <EmailSubmitMessage emailMessage={this.state.message} />
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <Field name="firstName" component="input" type="text" placeholder="First Name" className="form-control bg-dark" />
@@ -50,15 +50,15 @@ class ContactForm extends Component {
                                 <Field name="phone" component="input" type="text" placeholder="Phone" className="form-control bg-dark" />
                             </div>
                         </div>
-                        <h5 className="section-heading text-white mt-4 text-center">Projected Start Date and Property Details</h5>
+                        <h5 className="section-heading text-white mt-4 text-center">Property Details</h5>
                         <hr className="mt-1" />
                         <div className="form-row">
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Approximate Start Date</label>
+                                <label className="text-secondary">Approximate Start</label>
                                 <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleDateChange} />
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Building Type...</label>
+                                <label className="text-secondary">Building Type</label>
                                 <Field name="buildingTypes" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Building Type...</option> */}
                                     <option value="MultiFamily">MultiFamily</option>
@@ -67,7 +67,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Number of Units...</label>
+                                <label className="text-secondary">Number of Units</label>
                                 <Field name="numberOfUnits" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Number of Units...</option> */}
                                     <option value="1-100">1 - 99</option>
@@ -76,7 +76,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Number of Floors...</label>
+                                <label className="text-secondary">Number of Floors</label>
                                 <Field name="numberOfFloors" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Number of Floors...</option> */}
                                     <option value="1">1</option>
@@ -85,7 +85,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Site-Building Phasing...</label>
+                                <label className="text-secondary">Site-Building Phasing</label>
                                 <Field name="sitePhasing" component="select" className="custom-select bg-dark">
                                     {/* <option value="" disabled selected>Site-Building Phasing...</option> */}
                                     <option value="1">1</option>
@@ -95,7 +95,7 @@ class ContactForm extends Component {
                                 </Field>
                             </div>
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Number of IDF's...</label>
+                                <label className="text-secondary">Number of IDF's</label>
                                 <Field name="numberOfIdfs" component="select" className="custom-select bg-dark" >
                                     {/* <option value="" disabled selected>Number of IDF's...</option> */}
                                     <option value="1">1</option>
@@ -158,8 +158,7 @@ class ContactForm extends Component {
 
 
 function mapStateToProps(state) {
-    // console.log(state);
-    return { email: state.email };
+    return { responseMessage: state.emailAPIResponse.msg };
 }
 
 

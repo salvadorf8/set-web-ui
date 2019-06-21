@@ -1,12 +1,9 @@
-// import axios from 'axios';
 import herokuappEmail from '../api/herokuappEmail';
 
-export const sendEmail = (values) => {
-    console.log(values);
-    // const request = axios.post("https://set-web-api.herokuapp.com/email/sendform", values);
-    const promise = herokuappEmail.post('/sendform', values);
+export const sendEmail = (values) => async (dispatch) => {
+    const response = await herokuappEmail.post('/sendform', values);
 
-    return{ type: 'SEND_EMAIL', payload: promise };
+    dispatch({ type: 'SEND_EMAIL', payload: response });
 }
 
 export const selectProperty = (property) => {

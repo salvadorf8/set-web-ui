@@ -5,7 +5,7 @@ import emailReducer from './emailReducer';
 import { streamLineDataReducer, selectedPropertyReducer } from './streamlineDataReducer';
 
 export default combineReducers({
-    email: emailReducer,
+    emailAPIResponse: emailReducer,
     form: formReducer,
     streamlineData: streamLineDataReducer,
     selectedProperty: selectedPropertyReducer
