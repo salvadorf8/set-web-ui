@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { selectProperty } from '../actions';
+import { selectProperty } from '../../actions';
 
 
 class Header extends Component {
@@ -11,7 +11,7 @@ class Header extends Component {
       return (
         <div className="col-lg-4 col-sm-6" key={apartment.id}>
           <Link className="portfolio-box" to={`/project/${apartment.id}`}>
-            <img className="img-fluid" src={require(`../assets/img/portfolio/thumbnails/${apartment.mainImage}.jpg`)} alt="" />
+            <img className="img-fluid" src={require(`../../assets/img/portfolio/thumbnails/${apartment.mainImage}.jpg`)} alt="" />
             <div className="portfolio-box-caption">
               <div className="portfolio-box-caption-content">
                 <div className="project-category text-faded">Click for more info</div>

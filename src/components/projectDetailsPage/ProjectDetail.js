@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import ImageList from './commonComponents/ImageList';
+import ImageList from './ImageList';
 
 
 class ProjectDetail extends Component {
@@ -14,7 +14,7 @@ class ProjectDetail extends Component {
         </div>
         <div className="row mb-5">
           <div className="col-lg-4">
-            <img className="img-fluid" src={require(`../assets/img/portfolio/thumbnails/${this.props.mainImage}.jpg`)} alt="" />
+            <img className="img-fluid" src={require(`../../assets/img/portfolio/thumbnails/${this.props.mainImage}.jpg`)} alt="" />
           </div>
           <div className="col-lg-8">
             <div>

@@ -2,28 +2,20 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-// import moment, { calendarFormat } from 'moment';
-import "react-datepicker/dist/react-datepicker.css";
 
-import EmailSubmitMessage from './commonComponents/EmailSubmitMessage';
-import CheckBoxField from './commonComponents/CheckBoxField';
-import { sendEmail } from '../actions';
+import EmailSubmitMessage from './EmailSubmitMessage';
+import CheckBoxField from './CheckBoxField';
+import { sendEmail } from '../../actions';
+import ReactDatePicker from './ReactDatePicker';
 
 
 class ContactForm extends Component {
-    state = { startDate: moment(), message: "" };
+    state = { selectedDate: new Date(),  message: "" };
 
-    handleDateChange = (date) => {
-        this.setState({
-            startDate: date
-        });
-    }
-
-    onSubmit = (values) => {
-        this.props.sendEmail(values).then(
-            () => this.setState({message: this.props.responseMessage})
+    //With redux-form, we no longer need to handle with an event
+    onSubmit = (formValues) => {
+        this.props.sendEmail(formValues).then(
+            () => this.setState({ message: this.props.responseMessage })
         );
     }
 
@@ -35,32 +27,31 @@ class ContactForm extends Component {
                         <EmailSubmitMessage emailMessage={this.state.message} />
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <Field name="firstName" component="input" type="text" placeholder="First Name" className="form-control bg-dark" />
+                                <Field name="firstName" placeholder="First Name" className="form-control bg-dark" component="input" />
                             </div>
                             <div className="form-group col-md-6">
-                                <Field name="lastName" component="input" type="text" placeholder="Last Name" className="form-control bg-dark" />
+                                <Field name="lastName" placeholder="Last Name" className="form-control bg-dark" component="input" />
                             </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <Field name="email" component="input" type="text" placeholder="Email" className="form-control bg-dark" />
+                                <Field name="email" placeholder="Email" className="form-control bg-dark" component="input" />
                             </div>
 
                             <div className="form-group col-md-6">
-                                <Field name="phone" component="input" type="text" placeholder="Phone" className="form-control bg-dark" />
+                                <Field name="phone" placeholder="Phone" className="form-control bg-dark" component="input" />
                             </div>
                         </div>
                         <h5 className="section-heading text-white mt-4 text-center">Property Details</h5>
                         <hr className="mt-1" />
                         <div className="form-row">
+                            {/* ReactDatePicker library */}
                             <div className="form-group col-md-3">
-                                <label className="text-secondary">Approximate Start</label>
-                                <DatePicker name="projectedDate" className="custom-select bg-dark" selected={this.state.startDate} onChange={this.handleDateChange} />
+                                <Field name="date" className="custom-select bg-dark" defaultValue={this.state.selectedDate} label="Approximate Start" component={ReactDatePicker} />
                             </div>
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Building Type</label>
-                                <Field name="buildingTypes" component="select" className="custom-select bg-dark">
-                                    {/* <option value="" disabled selected>Building Type...</option> */}
+                                <Field name="buildingTypes" component="select" className="custom-select  bg-dark">
                                     <option value="MultiFamily">MultiFamily</option>
                                     <option value="SingleHome">SingleHome</option>
                                     <option value="Commercial">Commercial</option>
@@ -69,7 +60,6 @@ class ContactForm extends Component {
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Number of Units</label>
                                 <Field name="numberOfUnits" component="select" className="custom-select bg-dark">
-                                    {/* <option value="" disabled selected>Number of Units...</option> */}
                                     <option value="1-100">1 - 99</option>
                                     <option value="101-200">100 - 199</option>
                                     <option value="200orMore">200 or More...</option>
@@ -78,7 +68,6 @@ class ContactForm extends Component {
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Number of Floors</label>
                                 <Field name="numberOfFloors" component="select" className="custom-select bg-dark">
-                                    {/* <option value="" disabled selected>Number of Floors...</option> */}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3orMore">3 or More...</option>
@@ -87,7 +76,6 @@ class ContactForm extends Component {
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Site-Building Phasing</label>
                                 <Field name="sitePhasing" component="select" className="custom-select bg-dark">
-                                    {/* <option value="" disabled selected>Site-Building Phasing...</option> */}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -97,7 +85,6 @@ class ContactForm extends Component {
                             <div className="form-group col-md-3">
                                 <label className="text-secondary">Number of IDF's</label>
                                 <Field name="numberOfIdfs" component="select" className="custom-select bg-dark" >
-                                    {/* <option value="" disabled selected>Number of IDF's...</option> */}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
