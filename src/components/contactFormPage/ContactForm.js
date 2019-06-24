@@ -7,10 +7,20 @@ import EmailSubmitMessage from './EmailSubmitMessage';
 import CheckBoxField from './CheckBoxField';
 import { sendEmail } from '../../actions';
 import ReactDatePicker from './ReactDatePicker';
+import DropDownBox from './DropDownBox';
 
 
 class ContactForm extends Component {
-    state = { selectedDate: new Date(),  message: "" };
+    state = { 
+        selectedDate: new Date(),  
+        message: "",
+        buildingTypes: ["Multi Family", "Single Home", "Commercial"],
+        numberOfUnits: ["1 - 99","100 - 199","200 or More..."],
+        numberOfFloors: ["1", "2", "3 or more..."],
+        numberOfSitePhasing: ["1", "2", "3", "4 or more..."],
+        numberOfIDFs: ["1", "2", "3", "4 or more..."],
+        sending: true
+    };
 
     //With redux-form, we no longer need to handle with an event
     onSubmit = (formValues) => {
@@ -39,58 +49,19 @@ class ContactForm extends Component {
                             </div>
 
                             <div className="form-group col-md-6">
-                                <Field name="phone" placeholder="Phone" className="form-control bg-dark" component="input" />
+                                <Field name="phone" placeholder="Phone" className="form-control bg-dark" component="input" />00
                             </div>
                         </div>
                         <h5 className="section-heading text-white mt-4 text-center">Property Details</h5>
                         <hr className="mt-1" />
                         <div className="form-row">
-                            {/* ReactDatePicker library */}
-                            <div className="form-group col-md-3">
-                                <Field name="date" className="custom-select bg-dark" defaultValue={this.state.selectedDate} label="Approximate Start" component={ReactDatePicker} />
-                            </div>
-                            <div className="form-group col-md-3">
-                                <label className="text-secondary">Building Type</label>
-                                <Field name="buildingTypes" component="select" className="custom-select  bg-dark">
-                                    <option value="MultiFamily">MultiFamily</option>
-                                    <option value="SingleHome">SingleHome</option>
-                                    <option value="Commercial">Commercial</option>
-                                </Field>
-                            </div>
-                            <div className="form-group col-md-3">
-                                <label className="text-secondary">Number of Units</label>
-                                <Field name="numberOfUnits" component="select" className="custom-select bg-dark">
-                                    <option value="1-100">1 - 99</option>
-                                    <option value="101-200">100 - 199</option>
-                                    <option value="200orMore">200 or More...</option>
-                                </Field>
-                            </div>
-                            <div className="form-group col-md-3">
-                                <label className="text-secondary">Number of Floors</label>
-                                <Field name="numberOfFloors" component="select" className="custom-select bg-dark">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3orMore">3 or More...</option>
-                                </Field>
-                            </div>
-                            <div className="form-group col-md-3">
-                                <label className="text-secondary">Site-Building Phasing</label>
-                                <Field name="sitePhasing" component="select" className="custom-select bg-dark">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4orMore">4 or More...</option>
-                                </Field>
-                            </div>
-                            <div className="form-group col-md-3">
-                                <label className="text-secondary">Number of IDF's</label>
-                                <Field name="numberOfIdfs" component="select" className="custom-select bg-dark" >
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4orMore">4 or More...</option>
-                                </Field>
-                            </div>
+                            {/* ReactDatePicker library */}                               
+                            <Field name="date" className="form-control bg-dark" value={this.state.selectedDate} label="Approximate Start" component={ReactDatePicker} />
+                            <DropDownBox name="buildingType" className="custom-select  bg-dark" label="Building Type" values={this.state.buildingTypes} />
+                            <DropDownBox name="numberOfUnits" className="custom-select  bg-dark" label="Number of Units" values={this.state.numberOfUnits} />
+                            <DropDownBox name="numberOfFloors" className="custom-select  bg-dark" label="Number of Floors" values={this.state.numberOfFloors} />
+                            <DropDownBox name="sitePhasing" className="custom-select  bg-dark" label="Site-Building Phasing" values={this.state.numberOfSitePhasing} />
+                            <DropDownBox name="numberOfIdfs" className="custom-select  bg-dark" label="Number of IDF's" values={this.state.numberOfIDFs} />
                         </div>
                         <div className="form-row mt-2">
                             <div className="form-group col-md-3">

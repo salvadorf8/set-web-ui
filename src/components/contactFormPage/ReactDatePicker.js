@@ -7,7 +7,7 @@ const ReactDatePicker = ({ input, label, defaultValue, meta :{ error, touched}})
     // const className = `field ${error && touched ? 'error' : ''}`;
 
     return (
-        <div>
+        <div className="form-group col-md-3">
             <label className="text-secondary">{label}</label>
             <div>
                 <DatePicker className="form-control bg-dark text-light" autoComplete="off" dateForm="MM/DD/YYYY" selected={input.value ? new Date(input.value) : defaultValue} {...input} />
