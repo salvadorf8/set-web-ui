@@ -1,11 +1,15 @@
 import React from "react";
+import './spinner.css';
 
-const Spinner = () => {
-  return (
-      <div className="spinner-grow text-warning" role="status">
-        <span className="sr-only">Loading...</span>
+const Spinner = (props) => {
+  if (props.loading) {
+    return (
+      <div>
+        <div id="loading"></div>
       </div>
-  );
+    );
+  }
+  return <div></div>
 }
 
 export default Spinner;

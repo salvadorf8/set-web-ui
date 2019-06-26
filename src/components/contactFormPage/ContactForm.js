@@ -8,24 +8,27 @@ import CheckBoxField from './CheckBoxField';
 import { sendEmail } from '../../actions';
 import ReactDatePicker from './ReactDatePicker';
 import DropDownBox from './DropDownBox';
+import Spinner from './Spinner';
 
 
 class ContactForm extends Component {
-    state = { 
-        selectedDate: new Date(),  
+    state = {
+        selectedDate: new Date(),
         message: "",
         buildingTypes: ["Multi Family", "Single Home", "Commercial"],
-        numberOfUnits: ["1 - 99","100 - 199","200 or More..."],
+        numberOfUnits: ["1 - 99", "100 - 199", "200 or More..."],
         numberOfFloors: ["1", "2", "3 or more..."],
         numberOfSitePhasing: ["1", "2", "3", "4 or more..."],
         numberOfIDFs: ["1", "2", "3", "4 or more..."],
-        sending: true
+        loading: false
     };
 
-    //With redux-form, we no longer need to handle with an event
+    //With redux-form, we no longer need to handle with passing an event
     onSubmit = (formValues) => {
+        this.setState({ loading: true });
+
         this.props.sendEmail(formValues).then(
-            () => this.setState({ message: this.props.responseMessage })
+            () => this.setState({ message: this.props.responseMessage, loading: false })
         );
     }
 
@@ -35,6 +38,10 @@ class ContactForm extends Component {
                 <form name="contact" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                     <div className="container">
                         <EmailSubmitMessage emailMessage={this.state.message} />
+                        <Spinner loading={this.state.loading} />
+                        <div className="spinner-border text-light" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <Field name="firstName" placeholder="First Name" className="form-control bg-dark" component="input" />
@@ -55,7 +62,7 @@ class ContactForm extends Component {
                         <h5 className="section-heading text-white mt-4 text-center">Property Details</h5>
                         <hr className="mt-1" />
                         <div className="form-row">
-                            {/* ReactDatePicker library */}                               
+                            {/* ReactDatePicker library */}
                             <Field name="date" className="form-control bg-dark" value={this.state.selectedDate} label="Approximate Start" component={ReactDatePicker} />
                             <DropDownBox name="buildingType" className="custom-select  bg-dark" label="Building Type" values={this.state.buildingTypes} />
                             <DropDownBox name="numberOfUnits" className="custom-select  bg-dark" label="Number of Units" values={this.state.numberOfUnits} />
