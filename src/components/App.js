@@ -16,17 +16,7 @@ class App extends React.Component {
         return this.props.apartments.map((apartment) => {
             return (
                 <div key={apartment.id}>
-                    <Route path={`/project/:${apartment.id}`} exact render={() =>
-                        <ProjectDetail
-                            aptName={apartment.aptName}
-                            address={apartment.address}
-                            duration={apartment.duration}
-                            numberOfEmployed={apartment.numberOfEmployed}
-                            details={apartment.details}
-                            mainImage={apartment.mainImage}
-                            images={apartment.images}
-                        />}
-                    />
+                    <Route path={`/project/:id`} exact component={ProjectDetail} />
                 </div>
             )
         })

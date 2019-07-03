@@ -1,18 +1,10 @@
 
 
-export const selectedPropertyReducer = (selectedProperty = null, action) => {
-    if (action.type === 'PROPERTY_SELECTED') {
-        return action.payload;
-    }
-
-    return selectedProperty;
-};
-
 export const streamLineDataReducer = () => {
     return {
         n001:
         {
-            id: "001",
+            id: "n001",
             aptName: 'UpTown Square',
             address: '1354 Thorpe Ln, San Marcos, TX 78666',
             mainImage: 'uptown-square/UpTownSquare',
@@ -32,7 +24,7 @@ export const streamLineDataReducer = () => {
         },
         n002:
         {
-            id: "002",
+            id: "n002",
             aptName: 'B&F Flats',
             address: '4926 Mission Ave. Dallas, TX 75206',
             mainImage: 'bnf-flats/BnF-Flats',
@@ -54,7 +46,7 @@ export const streamLineDataReducer = () => {
         },
         n003:
         {
-            id: "003",
+            id: "n003",
             aptName: 'Domain West',
             address: '611 Dairy Ashford Rd. Houston, TX 77079',
             mainImage: 'domain-west/DomainWest',
@@ -72,7 +64,7 @@ export const streamLineDataReducer = () => {
         },
         n004:
         {
-            id: "004",
+            id: "n004",
             aptName: 'City Line',
             address: '1250 State St. Richardson, TX 75082',
             mainImage: 'city-line/CityLine',
@@ -118,7 +110,7 @@ export const streamLineDataReducer = () => {
         },
         n005:
         {
-            id: "005",
+            id: "n005",
             aptName: 'The Branch',
             address: '4670 Amesbury Dr. Dallas, TX 75206',
             mainImage: 'the-branch/the-branch',

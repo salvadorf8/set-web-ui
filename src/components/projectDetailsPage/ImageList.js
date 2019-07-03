@@ -2,15 +2,18 @@ import './ImageList.css';
 import React from 'react';
 import ImageCard from './ImageCard';
 
+
 const ImageList = (props) => {
-    // original line but we are destructering image
-    // const images = props.images.map((image) => {
-    const images = props.images.map((image) => {
-        //remember to add a key for performance reasons
+
+    const renderImageCards = props.images.map((image) => {
         return <ImageCard key={image.id} image={image} />;
     });
 
-    return <div className="image-list">{images}</div>;
+    return (
+        <div className="image-list">
+            {renderImageCards}
+        </div>
+    )
 };
 
 export default ImageList;

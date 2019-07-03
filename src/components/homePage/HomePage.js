@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { selectProperty } from '../../actions';
 
 
 class Header extends Component {
@@ -130,4 +129,4 @@ const mapStateToProps = (state) => {
   return { apartments: Object.values(state.streamlineData) };
 }
 
-export default connect(mapStateToProps, { selectProperty })(Header);
+export default connect(mapStateToProps)(Header);

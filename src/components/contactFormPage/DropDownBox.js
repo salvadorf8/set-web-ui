@@ -2,8 +2,6 @@ import React from 'react';
 import { Field } from 'redux-form';
 
 const DropDownBox = (input) => {
-    console.log(input)
-
 
     const RenderOptions = () => {
         return (
