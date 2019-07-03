@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Footer } from 'mdbreact';
 import { connect } from 'react-redux';
+
 
 import HomePage from './homePage/HomePage';
 import ContactForm from './contactFormPage/ContactForm';
@@ -36,9 +37,11 @@ class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <NavBar />
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/contact/new" component={ContactForm} />
-                    {this.renderApartmentLinks()}
+                    <Switch>
+                        <Route path="/" exact component={HomePage} />
+                        <Route path="/contact/new" component={ContactForm} />
+                        {this.renderApartmentLinks()}
+                    </Switch>
                     <Footer color="indigo">
                         <p className="footer-copyright mb-0 py-3 text-center text-secondary">
                             &copy; {new Date().getFullYear()} Copyright:{" "} streamlinewiring.com
