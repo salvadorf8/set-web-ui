@@ -1,20 +1,20 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
 
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 
-const ReactDatePicker = ({ input, label, defaultValue, meta :{ error, touched}}) => {
-    // const className = `field ${error && touched ? 'error' : ''}`;
+const ReactDatePicker = ({ input, label, defaultValue, meta: { error, touched } }) => {
+	// const className = `field ${error && touched ? 'error' : ''}`;
 
-    return (
-        <div className="form-group col-md-3">
-            <label className="text-secondary">{label}</label>
-            <div>
-                <DatePicker className="form-control bg-dark text-light" autoComplete="off" dateForm="MM/DD/YYYY" selected={input.value ? new Date(input.value) : defaultValue} {...input} />
-            </div>
-            {/* {touched && error && <span>{error}</span>} */}
-        </div>
-    );
-}
+	return (
+		<div className='form-group col-md-3'>
+			<label className='text-secondary'>{label}</label>
+			<div>
+				<DatePicker className='form-control bg-dark text-light' autoComplete='off' dateForm='MM/DD/YYYY' selected={input.value ? new Date(input.value) : defaultValue} {...input} />
+			</div>
+			{/* {touched && error && <span>{error}</span>} */}
+		</div>
+	);
+};
 
-export default ReactDatePicker
+export default ReactDatePicker;
