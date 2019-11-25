@@ -1,49 +1,46 @@
+import './NavigationBar.css';
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink } from 'mdbreact';
-
-// import Routes from "./Routes";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBBtn, MDBIcon } from 'mdbreact';
 
 class NavigationBar extends Component {
-	state = { collapseID: '' };
+    state = { isOpen: false, contactNumber: '972-302-9892' };
 
-	toggleCollapse = (collapseID) => () =>
-		this.setState((prevState) => ({
-			collapseID: prevState.collapseID !== collapseID ? collapseID : ''
-		}));
+    toggleCollapse = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    };
 
-	closeCollapse = (collapseID) => () => this.state.collapseID === collapseID && this.setState({ collapseID: '' });
+    render() {
+        return (
+            <MDBNavbar className='elegant-color-dark' dark expand='md' id='mainNav' scrolling transparent>
+                <MDBNavbarBrand>
+                    <MDBNavLink exact to='/'>
+                        STREAMLINE WIRING
+                    </MDBNavLink>
+                </MDBNavbarBrand>
 
-	render() {
-		const overlay = <div id='sidenav-overlay' style={{ backgroundColor: 'transparent' }} onClick={this.toggleCollapse('mainNavbarCollapse')} />;
-		return (
-			<div className='container'>
-				<Navbar color='indigo' dark expand='md' scrolling id='mainNav'>
-					<NavbarBrand href='/'>STREAMLINE WIRING</NavbarBrand>
-					<NavbarToggler onClick={this.toggleCollapse('mainNavbarCollapse')} />
-					<Collapse id='mainNavbarCollapse' isOpen={this.state.collapseID} navbar>
-						<NavbarNav right>
-							<NavItem>
-								<NavLink exact to='/' onClick={this.closeCollapse('mainNavbarCollapse')}>
-									Home
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink onClick={this.closeCollapse('mainNavbarCollapse')} to='/contact/new'>
-									Contact Us
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink onClick={this.closeCollapse('mainNavbarCollapse')} to=''>
-									Phone: 817 909 2138
-								</NavLink>
-							</NavItem>
-						</NavbarNav>
-					</Collapse>
-				</Navbar>
-				{this.state.collapseID && overlay}
-			</div>
-		);
-	}
+                <MDBNavbarToggler onClick={this.toggleCollapse} />
+                <MDBCollapse isOpen={this.state.isOpen} navbar>
+                    <MDBNavbarNav right></MDBNavbarNav>
+                    <MDBNavbarNav right>
+                        <MDBNavItem className='align-self-center'>
+                            <MDBNavLink exact to='/' onClick={this.toggleCollapse}>
+                                Home
+                            </MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className='align-self-center'>
+                            <MDBNavLink to='/contact/new' onClick={this.toggleCollapse}>
+                                Contact Us
+                            </MDBNavLink>
+                        </MDBNavItem>
+                        <MDBBtn size='sm' href='tel: 972-302-9892'>
+                            <MDBIcon icon='phone' className='pr-2' />
+                            972 302 9892
+                        </MDBBtn>
+                    </MDBNavbarNav>
+                </MDBCollapse>
+            </MDBNavbar>
+        );
+    }
 }
 
 export default NavigationBar;
