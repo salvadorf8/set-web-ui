@@ -103,25 +103,6 @@ class Header extends Component {
 
                 <div className='parallax' />
                 <Footer />
-                {/* <div className='bg-dark' id='contact'>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-lg-8 mx-auto text-center'>
-                                <h2 className='section-heading text-white mt-4'>Let's Get In Touch!</h2>
-                                <hr className='my-4' />
-                                <p className='mb-5 text-faded'>Ready to start your next project with us? We are Ready - We will be there.</p>
-                            </div>
-                            <div className='container'>
-                                <div className='col-lg-12 mx-auto text-center'>
-                                    <Link className='btn btn-primary btn-lg  mb-5' to='/contact/new'>
-                                        Contact Us
-                                    </Link>
-                                    <p className='mb-5 text-faded'>Or Call Us at: 817-909-2138</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         );
     }

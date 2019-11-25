@@ -31,7 +31,11 @@ const Footer = () => {
                             <MDBIcon icon='envelope' className='pr-2' />
                             Email
                         </MDBBtn>
-                        <MDBBtn size='sm' href='/contact/new'>
+                        <MDBBtn
+                            size='sm'
+                            onClick={() => {
+                                this.props.history.push('/contact/new');
+                            }}>
                             <MDBIcon fab icon='wpforms' className='pr-2' />
                             Contact Form
                         </MDBBtn>
