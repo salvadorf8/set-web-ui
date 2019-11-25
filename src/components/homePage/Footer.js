@@ -14,7 +14,7 @@ import MinimalFooter from './MinimalFooter';
 //     );
 // };
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <MDBFooter id='mainFooter' className='font-small mt-5'>
             <Container fluid className='text-center text-md-left'>
@@ -34,7 +34,7 @@ const Footer = () => {
                         <MDBBtn
                             size='sm'
                             onClick={() => {
-                                this.props.history.push('/contact/new');
+                                props.history.push('/contact/new');
                             }}>
                             <MDBIcon fab icon='wpforms' className='pr-2' />
                             Contact Form

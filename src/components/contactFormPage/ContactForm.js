@@ -65,7 +65,7 @@ class ContactForm extends Component {
     render() {
         var today = new Date();
         var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
-
+        console.log(this);
         return (
             <MDBContainer id='contactForm'>
                 <MDBRow>
@@ -117,7 +117,7 @@ class ContactForm extends Component {
                                             onClick={() => {
                                                 this.props.history.push('/');
                                             }}>
-                                            Cancel
+                                            Cancel <MDBIcon far icon='times-circle' className='pr-2' />
                                         </MDBBtn>
                                         <MDBBtn size='sm' type='submit'>
                                             Send <MDBIcon icon='envelope' className='ml-2' />

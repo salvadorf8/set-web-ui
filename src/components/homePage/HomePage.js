@@ -102,7 +102,7 @@ class Header extends Component {
                 </section>
 
                 <div className='parallax' />
-                <Footer />
+                <Footer history={this.props.history} />
             </div>
         );
     }
