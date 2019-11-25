@@ -3,7 +3,7 @@ import herokuappEmail from '../api/herokuappEmail';
 
 export const sendEmail = (values) => async (dispatch) => {
     console.log('in action creator ', values);
-    const response = await herokuappEmail.post('/email/sendform', values);
+    const response = await herokuappEmail.post('/sendform', values);
 
     dispatch({ type: 'SEND_EMAIL', payload: response });
 };
