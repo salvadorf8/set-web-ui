@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBBtn, MDBIcon } from 'mdbreact';
 
 class NavigationBar extends Component {
-    state = { isOpen: false, contactNumber: '972-302-9892' };
+    state = { isOpen: false };
 
     toggleCollapse = () => {
         this.setState({ isOpen: !this.state.isOpen });
@@ -11,10 +11,10 @@ class NavigationBar extends Component {
 
     render() {
         return (
-            <MDBNavbar className='elegant-color-dark' dark expand='md' id='mainNav' scrolling transparent>
+            <MDBNavbar id='mainNav' color='elegant-color-dark' dark expand='md' fixed={this.props.isFixed} scrolling transparent>
                 <MDBNavbarBrand>
                     <MDBNavLink exact to='/'>
-                        STREAMLINE WIRING
+                        <h4 className='h4-responsive'>STREAMLINE WIRING</h4>
                     </MDBNavLink>
                 </MDBNavbarBrand>
 
@@ -33,7 +33,7 @@ class NavigationBar extends Component {
                             </MDBNavLink>
                         </MDBNavItem>
                         <MDBBtn size='sm' href='tel: 972-302-9892'>
-                            <MDBIcon icon='phone' className='pr-2' />
+                            <MDBIcon icon='phone' className='pr-3' />
                             972 302 9892
                         </MDBBtn>
                     </MDBNavbarNav>

@@ -1,7 +1,10 @@
+import './homepage.css';
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import MainView from './MainView';
 import Footer from './Footer';
 
 // TODO - finish converting this component styling to MDBreact
@@ -26,26 +29,9 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
-                <header className='masthead text-center text-white d-flex'>
-                    <div className='container my-auto bg-dark-transparent'>
-                        <div className='row'>
-                            <div className='col-lg-10 mx-auto'>
-                                <h1 className='text-uppercase'>
-                                    <strong>Streamline Wiring Installations</strong>
-                                </h1>
-                                <hr />
-                            </div>
-                            <div className='col-lg-8 mx-auto'>
-                                <p className='mb-5'>
-                                    Installation &amp; Structured Cabling - Trim Out - Security and Authorization Integration <br /> We focus on Multifamily Apartment Complex Projects
-                                </p>
-                                {/* <a className="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> */}
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <section className='bg-dark' id='about'>
+            <div id='homepage'>
+                <MainView />
+                <section>
                     <div className='container'>
                         <div className='row'>
                             <div className='col-lg-12 text-center'>
@@ -87,7 +73,7 @@ class Header extends Component {
                         </div>
                     </div>
                 </section>
-                <section className='p-0  bg-dark minor-space' id='portfolio'>
+                <section className='p-0 minor-space mb-5' id='portfolio'>
                     <div className='container'>
                         <div className='row'>
                             <div className='col-lg-12 text-center'>

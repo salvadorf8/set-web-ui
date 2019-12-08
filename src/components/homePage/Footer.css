@@ -24,3 +24,10 @@
     color: #fff;
     background-color: #ee4b28 !important;
 }
+
+#minimizedfooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

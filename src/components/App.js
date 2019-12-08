@@ -6,7 +6,7 @@ import { MDBRow, MDBCol } from 'mdbreact';
 import HomePage from './homePage/HomePage';
 import ContactForm from './contactFormPage/ContactForm';
 import ProjectDetail from './projectDetailsPage/ProjectDetail';
-import NavBar from './NavigationBar';
+
 import { selectProperty } from '../actions';
 
 class App extends React.Component {
@@ -25,7 +25,6 @@ class App extends React.Component {
             <BrowserRouter>
                 <MDBRow>
                     <MDBCol>
-                        <NavBar />
                         <Switch>
                             <Route path='/' exact component={HomePage} />
                             <Route path='/contact/new' component={ContactForm} />

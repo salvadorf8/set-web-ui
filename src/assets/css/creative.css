@@ -1,4 +1,4 @@
-/* TODO - finish converting the styling to MDBreact to remove this file... Almost finished then delete */
+/* TODO - finish converting the styling to MDBreact to remove this file... Almost finished then remove most of the css */
 
 html {
     height: 100%;
@@ -7,8 +7,8 @@ html {
 
 body {
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
-    background-color: #212529 !important;
-    min-height: 100%;
+    /* background-color: #212529 !important; */
+    background-color: #212121 !important; /* Note: also known as elegant-color-dark */
 }
 
 hr {
@@ -21,34 +21,9 @@ hr.light {
     border-color: #fff;
 }
 
-a {
-    color: #f05f40;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-a:hover {
-    color: #f05f40;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-
-.bg-dark {
+/* .bg-dark {
     background-color: #212529 !important;
-}
-
-.bg-dark-transparent {
-    background-color: #212529 !important;
-    opacity: 0.7;
-}
+} */
 
 .minor-space {
     padding: 3rem 0 !important;
@@ -88,57 +63,6 @@ img::-moz-selection {
     background: transparent;
 }
 
-/* Front image centered text */
-header.masthead {
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 56px);
-    background-image: url('../img/header3.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-header.masthead hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-header.masthead h1 {
-    font-size: 2rem;
-}
-
-header.masthead p {
-    font-weight: 300;
-}
-
-@media (min-width: 768px) {
-    header.masthead p {
-        font-size: 1.15rem;
-    }
-}
-
-@media (min-width: 992px) {
-    header.masthead {
-        height: 100vh;
-        min-height: 650px;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    header.masthead h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    header.masthead h1 {
-        font-size: 4rem;
-    }
-}
-
-/*  */
 .service-box {
     max-width: 400px;
 }
@@ -205,92 +129,4 @@ header.masthead p {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
-}
-
-.text-primary {
-    color: #f05f40 !important;
-}
-
-.btn {
-    font-weight: 700;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 300px;
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-
-.btn-primary {
-    background-color: #f05f40;
-    border-color: #f05f40;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-    color: #fff;
-    background-color: #ee4b28 !important;
-}
-
-.btn-primary:active,
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
-}
-
-.parallax {
-    background-image: url('../img/architecture.jpg');
-    height: 300px;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-.react-datepicker__input-container {
-    background-color: #212529 !important;
-}
-
-/* placeholder text for the form */
-input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-input:-moz-placeholder {
-    /* Firefox 18- */
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-input:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-textarea::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-textarea:-moz-placeholder {
-    /* Firefox 18- */
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-textarea::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-textarea:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-.custom-select {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
-label.text-faded {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
 }

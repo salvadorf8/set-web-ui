@@ -1,6 +1,5 @@
 #contactForm {
     font-family: 'Exo 2', sans-serif;
-    margin-top: auto;
 }
 
 #contactForm .md-form > input[type='date']:focus:not([readonly]),
