@@ -4,15 +4,15 @@ import ReactDOM from 'react-dom';
 
 import { MDBFooter } from 'mdbreact';
 
-const MiniFooter = () => {
+const MinimizedFooter = () => {
     return ReactDOM.createPortal(
         <MDBFooter id='minimizedfooter' className='font-small'>
-            <div id='minimalFooter' className={`footer-copyright text-center py-3 mt-4`}>
+            <div className={`footer-copyright text-center py-3 mt-4`}>
                 &copy; {new Date().getFullYear()} Copyright: <a href='http://www.streamlinewiring.com'>Streamlinewiring.com</a>
             </div>
         </MDBFooter>,
-        document.querySelector('#minifooter')
+        document.querySelector('#minimizedfooter')
     );
 };
 
-export default MiniFooter;
+export default MinimizedFooter;
