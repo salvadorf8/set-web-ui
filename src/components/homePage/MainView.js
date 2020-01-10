@@ -19,7 +19,7 @@ const MainView = () => {
                                     <h1 className='h1-responsive mt-sm-4 mx-sm-2'>STREAMLINE WIRING INSTALLATIONS</h1>
                                     <hr />
                                     <h6 className='mb-sm-1'>structured cabling - trim outs - security and authorization entry installations</h6>
-                                    <h6 className='mb-sm-1 mb-lg-5'>14 years delivering multidwelling unit (MDU) solutions</h6>
+                                    <h6 className='mb-sm-1 mb-lg-5'>13 years delivering Multi-Family Residential solutions</h6>
                                 </MDBAnimation>
                             </MDBCol>
                         </MDBRow>

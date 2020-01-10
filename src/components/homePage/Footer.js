@@ -11,7 +11,10 @@ const Footer = (props) => {
                     <Row>
                         <MDBCol md='6'>
                             <h5 className='title'>Company Profile</h5>
-                            <p>Streamline wiring was founded in 2007. We specialize in low voltage wiring and trimming installations for multi-family construction properties.</p>
+                            <p>
+                                Founded in 2007 by Gabriel Hernandez, Streamline Wiring began specializing with providing Voice-Video-Data installations to Multi-Family Residential developing properties. Through the years of experience Streamline had exceeded quality, speed, and reliability.
+                                Trusting responsibilities on our hands, the result has always been a proven job done in any small or large capacity.
+                            </p>
                             <p>Voice - Data - Video</p>
                         </MDBCol>
                         <MDBCol md='6' className='md-center'>
