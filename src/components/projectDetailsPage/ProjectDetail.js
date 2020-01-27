@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { MDBRow, MDBCol, MDBBtn } from 'mdbreact';
 
 import ImageList from './ImageList';
+import NewImageList from './NewImageList';
 import NavBar from '../NavigationBar';
 import Footer from '../homePage/Footer';
 
@@ -42,7 +43,8 @@ class ProjectDetail extends React.Component {
                         </div>
                     </div>
                     <div className='mb-5'>
-                        <ImageList images={this.props.apartment.images} />
+                        {/* <ImageList images={this.props.apartment.images} /> */}
+                        <NewImageList images={this.props.apartment.images} />
                     </div>
                     <div className='mb-5'>
                         <MDBRow>
