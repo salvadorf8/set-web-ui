@@ -35,7 +35,7 @@ class Header extends Component {
                     <div className='container'>
                         <div className='row'>
                             <div className='col-lg-12 text-center'>
-                                <h2 className='section-heading text-white'>Services</h2>
+                                <h2 className='section-heading'>Low-Voltage</h2>
                                 <hr className='my-1' />
                             </div>
                         </div>
@@ -45,29 +45,29 @@ class Header extends Component {
                             <div className='col-lg-3 col-md-6 text-center'>
                                 <div className='service-box mt-5 mx-auto'>
                                     <i className='text-primary mb-3 sr-icons' />
-                                    <h3 className='mb-3 text-white'>Voice</h3>
-                                    <p className='text-muted mb-0'>Our team can help design and install the voice wiring that meets your needs whether it be a traditional landline or VoIP.</p>
+                                    <h3 className='mb-3'>Voice</h3>
+                                    <p className='mb-0'>Traditional landline or VoIP, communication installation has always been a standard where our professionals are here to install to code</p>
                                 </div>
                             </div>
                             <div className='col-lg-3 col-md-6 text-center'>
                                 <div className='service-box mt-5 mx-auto'>
                                     <i className='text-primary mb-3 sr-icons' />
-                                    <h3 className='mb-3 text-white'>Data</h3>
-                                    <p className='text-muted mb-0'>Structured, low-voltage cabling is the backbone of any network infrastructure. Our team will deliver your next project with success.</p>
+                                    <h3 className='mb-3'>Video</h3>
+                                    <p className='mb-0'>Interested in audio and visual applications? Our team of experienced A/V professionals are specialized in Amenities relaxation and entertainment.</p>
                                 </div>
                             </div>
                             <div className='col-lg-3 col-md-6 text-center'>
                                 <div className='service-box mt-5 mx-auto'>
                                     <i className='text-primary mb-3 sr-icons' />
-                                    <h3 className='mb-3 text-white'>Video</h3>
-                                    <p className='text-muted mb-0'>Interested in video applications? Our team of experienced A/V professionals are specialized in home or office entertainment.</p>
+                                    <h3 className='mb-3'>Data</h3>
+                                    <p className='mb-0'>Structuring low-voltage wiring is the backbone of any network infrastructure. Our team will home run connectivity capability where desired.</p>
                                 </div>
                             </div>
                             <div className='col-lg-3 col-md-6 text-center'>
                                 <div className='service-box mt-5 mx-auto'>
                                     <i className='text-primary mb-3 sr-icons' />
-                                    <h3 className='mb-3 text-white'>Access Control</h3>
-                                    <p className='text-muted mb-0'>Protecting those who are most vulnerable are both security and safety requirements of today. Our team will deliver a solid access control solution.</p>
+                                    <h3 className='mb-3'>Access Control</h3>
+                                    <p className='mb-0'>Protecting those who are most vulnerable are both a security and safety of today. We will install hardware to any door location and run wiring to any MDF or IDF</p>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ class Header extends Component {
                     <div className='container'>
                         <div className='row'>
                             <div className='col-lg-12 text-center'>
-                                <h2 className='section-heading text-white'>Project Spotlights</h2>
+                                <h2 className='section-heading'>Project Spotlights</h2>
                                 <hr className='my-4' />
                             </div>
                         </div>

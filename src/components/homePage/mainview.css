@@ -12,8 +12,9 @@
 }
 
 #mainview h1 {
-    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
+
+    font-weight: 500;
 }
 
 #mainview hr {

@@ -12,10 +12,10 @@ const Footer = (props) => {
                         <MDBCol md='6'>
                             <h5 className='title'>Company Profile</h5>
                             <p>
-                                Founder and President Gabriel Hernandez began in 2007 specializing Voice-Video-Data installations to Multi-Family Residential developing properties. Through the years of trust, Streamline had exceeded quality, experience, reliability and growth. Trusting any
+                                Co-Founder and President Gabriel Hernandez began in 2007 specializing Voice-Video-Data installations to Multi-Family Residential developing properties. Through the years of trust, Streamline had exceeded quality, experience, reliability and growth. Trusting any
                                 responsibilities to us, the resulting experience will be a proven job done.
                             </p>
-                            <p>Voice - Data - Video</p>
+                            <p>Voice - Video - Data</p>
                             <p className='font-italic'>"Quality is never an accident. It is always the result of intellegent effort"</p>
                         </MDBCol>
                         <MDBCol md='6' className='md-center'>
