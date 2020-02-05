@@ -6,17 +6,20 @@ import { MDBRow, MDBCol } from 'mdbreact';
 import HomePage from './homePage/HomePage';
 import ContactForm from './contactFormPage/ContactForm';
 import ProjectDetail from './projectDetailsPage/ProjectDetail';
+import Login from './managementPage/Login';
+import DrawSchedule from './managementPage/DrawSchedule';
+import Uconstruction from './projectDetailsPage/UnderConstruction';
 
 import { selectProperty } from '../actions';
 
 class App extends React.Component {
     renderApartmentLinks = () => {
         return this.props.apartments.map((apartment) => {
-            return (
-                <div key={apartment.id}>
-                    <Route path={`/project/:id`} exact component={ProjectDetail} />
-                </div>
-            );
+            if (apartment.isUnderConstruction) {
+                return <Route key={apartment.id} path='/underconstruction' exact component={Uconstruction} />;
+            }
+
+            return <Route key={apartment.id} path={`/project/:id`} exact component={ProjectDetail} />;
         });
     };
 
@@ -28,6 +31,8 @@ class App extends React.Component {
                         <Switch>
                             <Route path='/' exact component={HomePage} />
                             <Route path='/contact/new' component={ContactForm} />
+                            <Route path='/login' component={Login} />
+                            <Route path='/manager/drawschedule/:id' component={DrawSchedule} />
                             {this.renderApartmentLinks()}
                         </Switch>
                     </MDBCol>
