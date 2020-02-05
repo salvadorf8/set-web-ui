@@ -119,7 +119,7 @@ export const newStreamLineDataReducer = () => {
             isUnderConstruction: true,
             aptName: 'for our recent events',
             address: 'Modera property and Ross',
-            mainImage: 'spotlight/page6',
+            mainImage: 'spotlight/camera',
             duration: 'From two years ago, most current pictures',
             numberOfEmployed: 8,
             details: '',
