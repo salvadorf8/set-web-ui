@@ -6,9 +6,28 @@ import NavBar from '../NavigationBar';
 import MinimizedFooter from '../homePage/MinimizedFooter';
 
 class UnderConstruction extends React.Component {
-    state = { days: 4, hours: 0, minutes: 0, seconds: 0 };
+    state = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
     componentDidMount = () => {
+        var future = new Date(2020, 1, 11, 12);
+        var today = new Date();
+
+        var delta = Math.abs((future - today) / 1000);
+        var days = Math.floor(delta / 86400);
+        delta -= days * 86400;
+        var hours = Math.floor(delta / 3600) % 24;
+        delta -= hours * 3600;
+        var minutes = Math.floor(delta / 60) % 60;
+        delta -= minutes * 60;
+        var seconds = delta;
+
+        console.log(seconds);
+        console.log(minutes);
+        console.log(hours);
+        console.log(days);
+
+        this.setState({ days: days, hours: hours, minutes: minutes, seconds: Math.round(seconds) });
+
         this.myInterval = setInterval(() => {
             const { days, hours, minutes, seconds } = this.state;
 
