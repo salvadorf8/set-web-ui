@@ -68,7 +68,7 @@ export const newStreamLineDataReducer = () => {
             duration: '4 Years',
             numberOfEmployed: 10,
             details:
-                'City Line, Definition:  =  "a very large property". Separate buildings but yet breath taking beauty with so much to offer for all types of walk.  This large contract was a four phase monster and each a one year duration (Phase A, B, C and D) each had 400+ units where our contract involved wire-runs to each unit plus trimout.  DAS cables were installed to enhance mobile connectivity, indoor/outdoor/hallway security cameras, keypad/sirens for each unit and Facility Access Control.  Amenities were also our responsibility to install recessed speakers, recessed televisions, network for computer rooms...  Work-Complete-Repeat for each phase.',
+                'City Line, Definition:  =  "a very large property". Separate buildings but yet breath taking beauty with so much to offer for all types of walk.  This large contract was a four phase monster and each a one year duration (Phase A, B, C and D) each had 400+ units where our contract involved wire-runs to each unit plus trimout.  DAS cables were installed to enhance mobile connectivity, indoor/outdoor/hallway security cameras, keypad/sirens for each unit and Facility Access Control.  Amenities were also our responsibility to install recessed speakers, televisions, network for computer rooms, and CCTV cameras for security...  --- [ Work-Complete-Repeat ] --- was our moto.',
             images: [
                 { id: '1', description: null, src: '/images/city-line/IMG_1031.jpg', width: 4, height: 5 },
                 { id: '4', description: null, src: '/images/city-line/IMG_1036.jpg', width: 4, height: 3 },
