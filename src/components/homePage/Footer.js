@@ -16,7 +16,7 @@ const Footer = (props) => {
                                 responsibilities to us, the resulting experience will be a proven job done.
                             </p>
                             <p>Voice - Video - Data</p>
-                            <p className='font-italic'>"Quality is never an accident. It is always the result of intellegent effort"</p>
+                            <p className='font-italic'>"Quality is never an accident. It is always the result of intelligent effort"</p>
                         </MDBCol>
                         <MDBCol md='6' className='md-center'>
                             <h5 className='title'>Contact Options</h5>
