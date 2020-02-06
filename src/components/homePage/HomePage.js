@@ -86,7 +86,7 @@ class Header extends Component {
                                 <div className='service-box mt-5 mx-auto'>
                                     <i className='text-primary mb-3 sr-icons' />
                                     <h3 className='mb-3'>Access Control</h3>
-                                    <p className='mb-0'>Protecting those who are most vulnerable are both a security and safety of today. Our professionals are available install hardware to secure your property</p>
+                                    <p className='mb-0'>Protecting those who are most vulnerable are both a security and safety of today. Our experienced guys are here to install hardware that will secure your doors</p>
                                 </div>
                             </div>
                         </div>
