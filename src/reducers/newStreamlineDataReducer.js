@@ -113,27 +113,6 @@ export const newStreamLineDataReducer = () => {
                 // { id: '8', description: null, src: '/images/the-branch/IMG_6594.jpg', width: 4, height: 3 },
                 { id: '9', description: null, src: '/images/the-branch/IMG_6596.jpg', width: 3, height: 4 }
             ]
-        },
-        n006: {
-            id: 'n006',
-            isUnderConstruction: true,
-            aptName: 'for our recent events',
-            address: 'Modera property and Ross',
-            mainImage: 'spotlight/camera',
-            duration: 'From two years ago, most current pictures',
-            numberOfEmployed: 8,
-            details: '',
-            images: [
-                { id: '1', description: null, src: '/images/the-branch/IMG_6391.jpg', width: 3, height: 4 },
-                { id: '2', description: null, src: '/images/the-branch/IMG_6392.jpg', width: 4, height: 3 },
-                { id: '3', description: null, src: '/images/the-branch/IMG_6393.jpg', width: 3, height: 4 },
-                { id: '4', description: null, src: '/images/the-branch/IMG_6398.jpg', width: 3, height: 4 },
-                { id: '5', description: null, src: '/images/the-branch/IMG_6399.jpg', width: 4, height: 3 },
-                { id: '6', description: null, src: '/images/the-branch/IMG_6400.jpg', width: 4, height: 3 },
-                { id: '7', description: null, src: '/images/the-branch/IMG_6592.jpg', width: 4, height: 4 },
-                // { id: '8', description: null, src: '/images/the-branch/IMG_6594.jpg', width: 4, height: 3 },
-                { id: '9', description: null, src: '/images/the-branch/IMG_6596.jpg', width: 3, height: 4 }
-            ]
         }
     };
 };
